@@ -46,7 +46,7 @@
 * {
 	-gtk-icon-style: regular;
 	-GtkWidget-link-color: @link_fg_normal;
-    -GtkWidget-cursor-aspect-ratio: 0.1;
+/*    -GtkWidget-cursor-aspect-ratio: 0.1;*/
 }
 .background {
 	background-color: @default_bg_normal;
