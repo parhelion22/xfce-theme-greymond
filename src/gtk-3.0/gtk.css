@@ -46,6 +46,7 @@
 * {
 	-gtk-icon-style: regular;
 	-GtkWidget-link-color: @link_fg_normal;
+    -GtkWidget-cursor-aspect-ratio: 0.1;
 }
 .background {
 	background-color: @default_bg_normal;
@@ -313,6 +314,14 @@ entry:checked {
 entry:disabled {
 	background-color: @default_base_insensitive;
 	color: @default_text_insensitive;
+}
+
+/****************
+ * text fields  *
+ ****************/
+.view text {
+	background-color: @default_base_normal;
+	color: @default_text_normal;
 }
 
 /***************
@@ -1128,8 +1137,7 @@ XfdesktopIconView.view {
 }
 
 XfdesktopIconView.view:active {
-    background: #00ff00;
-    border: 1px solid #00ff00;
+    	background: @default_bg_selected;
 }
 
 /*
@@ -1137,11 +1145,11 @@ XfdesktopIconView.view .label {
     text-shadow: 10px 10px 20px black;
 }
 */
-
-/*XfdesktopIconView.view .rubberband {
+/*
+XfdesktopIconView.view .rubberband {
     border-radius: 0;
-}*/
-
+}
+*/
 
 /*******************************
  * XFCE4 Session Logout Dialog *
