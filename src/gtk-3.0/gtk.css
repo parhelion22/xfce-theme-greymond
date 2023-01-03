@@ -1210,6 +1210,79 @@ XfdesktopIconView.view .rubberband {
  * XFCE4 Window Manager (XFWM) *
  *******************************/
 
+
+/**********************
+ * Window Decorations *
+ **********************/
+decoration { border-radius: 7px 7px 0 0; border-width: 0px; box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.23); margin: 10px; }
+
+decoration:backdrop { box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.18); transition: 200ms ease-out; }
+
+.maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration { border-radius: 0; }
+
+.popup decoration { box-shadow: none; }
+
+.ssd decoration { box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23); }
+
+.csd.popup decoration { border-radius: 0; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); }
+
+tooltip.csd decoration { border-radius: 5px; box-shadow: none; }
+
+messagedialog.csd decoration { border-radius: 7px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); }
+
+.solid-csd decoration { margin: 0; padding: 4px; background-color: #828282; border: solid 1px #828282; border-radius: 0; box-shadow: inset 0 0 0 3px #cecece, inset 0 1px rgba(255, 255, 255, 0.8); }
+
+.solid-csd decoration:backdrop { box-shadow: inset 0 0 0 3px #cecece, inset 0 1px rgba(255, 255, 255, 0.8); }
+
+button.titlebutton { text-shadow: 0 1px rgba(255, 255, 255, 0.769231); -gtk-icon-shadow: 0 1px rgba(255, 255, 255, 0.769231); }
+
+button.titlebutton:not(.appmenu) { color: transparent; background-color: transparent; background-position: center; background-repeat: no-repeat; }
+
+button.titlebutton:not(.appmenu):backdrop { opacity: 0.5; }
+
+button.titlebutton.close { background-image: -gtk-scaled(url("assets/titlebutton-close.png"), url("assets/titlebutton-close@2.png")); }
+
+button.titlebutton.close:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop.png"), url("assets/titlebutton-close-backdrop@2.png")); }
+
+button.titlebutton.close:hover { background-image: -gtk-scaled(url("assets/titlebutton-close-hover.png"), url("assets/titlebutton-close-hover@2.png")); }
+
+button.titlebutton.close:active { background-image: -gtk-scaled(url("assets/titlebutton-close-active.png"), url("assets/titlebutton-close-active@2.png")); }
+
+button.titlebutton.maximize { background-image: -gtk-scaled(url("assets/titlebutton-maximize.png"), url("assets/titlebutton-maximize@2.png")); }
+
+button.titlebutton.maximize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop.png"), url("assets/titlebutton-maximize-backdrop@2.png")); }
+
+button.titlebutton.maximize:hover { background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover.png"), url("assets/titlebutton-maximize-hover@2.png")); }
+
+button.titlebutton.maximize:active { background-image: -gtk-scaled(url("assets/titlebutton-maximize-active.png"), url("assets/titlebutton-maximize-active@2.png")); }
+
+button.titlebutton.minimize { background-image: -gtk-scaled(url("assets/titlebutton-minimize.png"), url("assets/titlebutton-minimize@2.png")); }
+
+button.titlebutton.minimize:backdrop { background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop.png"), url("assets/titlebutton-minimize-backdrop@2.png")); }
+
+button.titlebutton.minimize:hover { background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover.png"), url("assets/titlebutton-minimize-hover@2.png")); }
+
+button.titlebutton.minimize:active { background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.png"), url("assets/titlebutton-minimize-active@2.png")); }
+
+button.titlebutton:backdrop { -gtk-icon-shadow: none; }
+
+.selection-mode headerbar button.titlebutton, .selection-mode .titlebar button.titlebutton, headerbar.selection-mode button.titlebutton, .titlebar.selection-mode button.titlebutton { text-shadow: 0 -1px rgba(0, 0, 0, 0.548235); -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.548235); }
+
+.selection-mode headerbar button.titlebutton:backdrop, .selection-mode .titlebar button.titlebutton:backdrop, headerbar.selection-mode button.titlebutton:backdrop, .titlebar.selection-mode button.titlebutton:backdrop { -gtk-icon-shadow: none; }
+
+textview text:focus:selected, iconview:focus:selected, flowbox headerbar.selection-mode flowboxchild.subtitle:focus:link, headerbar.selection-mode flowbox flowboxchild.subtitle:focus:link, notebook > header > tabs > arrow.button:focus:selected, row:focus:selected, headerbar.selection-mode row.subtitle:focus:link, headerbar.selection-mode calendar.subtitle:focus:link, selection, .view:selected, .view text:selected, textview text:selected, iconview:selected, flowbox flowboxchild:selected, label:disabled selection, modelbutton.flat:selected, .menuitem.button.flat:selected, headerbar.selection-mode .view.subtitle:link, flowbox headerbar.selection-mode flowboxchild.subtitle:link, headerbar.selection-mode flowbox flowboxchild.subtitle:link, headerbar.selection-mode .flat.subtitle:link, popover.background checkbutton.flat:selected, popover.background radiobutton.flat:selected, popover.background checkbutton.button:selected, popover.background radiobutton.button:selected, notebook > header > tabs > arrow.button:selected, row.activatable:selected, headerbar.selection-mode .activatable.subtitle:link, .selection-mode.titlebar:not(headerbar) .activatable.subtitle:link, row:selected, headerbar.selection-mode row.subtitle:link, .selection-mode.titlebar:not(headerbar) row.subtitle:link, calendar:selected, headerbar.selection-mode calendar.subtitle:link, .selection-mode.titlebar:not(headerbar) calendar.subtitle:link, button.button.sidebar-button:selected, button.button.titlebutton:selected { color: #ffffff; background-color: #398ee7; }
+
+selection:backdrop, .view:backdrop:selected, .view text:backdrop:selected, textview text:backdrop:selected, iconview:backdrop:selected, flowbox flowboxchild:backdrop:selected, label:disabled selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, headerbar.selection-mode .view.subtitle:backdrop:link, flowbox headerbar.selection-mode flowboxchild.subtitle:backdrop:link, headerbar.selection-mode flowbox flowboxchild.subtitle:backdrop:link, headerbar.selection-mode .flat.subtitle:backdrop:link, popover.background checkbutton.flat:backdrop:selected, popover.background radiobutton.flat:backdrop:selected, popover.background checkbutton.button:backdrop:selected, popover.background radiobutton.button:backdrop:selected, notebook > header > tabs > arrow.button:backdrop:selected, headerbar.selection-mode .activatable.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) .activatable.subtitle:backdrop:link, row:backdrop:selected, headerbar.selection-mode row.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) row.subtitle:backdrop:link, calendar:backdrop:selected, headerbar.selection-mode calendar.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) calendar.subtitle:backdrop:link, button.button.sidebar-button:backdrop:selected, button.button.titlebutton:backdrop:selected { color: #7d7d7d; background-color: #d1d1d1; }
+
+row:selected label, label:selected, headerbar.selection-mode row.subtitle:link label, headerbar.selection-mode label.subtitle:link, .selection-mode button.titlebutton, selection, .view:selected, .view text:selected, textview text:selected, iconview:selected, flowbox flowboxchild:selected, label:disabled selection, modelbutton.flat:selected, .menuitem.button.flat:selected, headerbar.selection-mode .view.subtitle:link, flowbox headerbar.selection-mode flowboxchild.subtitle:link, headerbar.selection-mode flowbox flowboxchild.subtitle:link, headerbar.selection-mode .flat.subtitle:link, popover.background checkbutton.flat:selected, popover.background radiobutton.flat:selected, popover.background checkbutton.button:selected, popover.background radiobutton.button:selected, notebook > header > tabs > arrow.button:selected, row.activatable:selected, headerbar.selection-mode .activatable.subtitle:link, .selection-mode.titlebar:not(headerbar) .activatable.subtitle:link, row:selected, headerbar.selection-mode row.subtitle:link, .selection-mode.titlebar:not(headerbar) row.subtitle:link, calendar:selected, headerbar.selection-mode calendar.subtitle:link, .selection-mode.titlebar:not(headerbar) calendar.subtitle:link, button.button.sidebar-button:selected, button.button.titlebutton:selected { color: #ffffff; outline-color: rgba(255, 255, 255, 0.3); }
+
+row:selected label:backdrop, label:backdrop:selected, headerbar.selection-mode row.subtitle:link label:backdrop, headerbar.selection-mode label.subtitle:backdrop:link, .selection-mode button.titlebutton:backdrop, selection:backdrop, .view:backdrop:selected, .view text:backdrop:selected, textview text:backdrop:selected, iconview:backdrop:selected, flowbox flowboxchild:backdrop:selected, label:disabled selection:backdrop, modelbutton.flat:backdrop:selected, .menuitem.button.flat:backdrop:selected, headerbar.selection-mode .view.subtitle:backdrop:link, flowbox headerbar.selection-mode flowboxchild.subtitle:backdrop:link, headerbar.selection-mode flowbox flowboxchild.subtitle:backdrop:link, headerbar.selection-mode .flat.subtitle:backdrop:link, popover.background checkbutton.flat:backdrop:selected, popover.background radiobutton.flat:backdrop:selected, popover.background checkbutton.button:backdrop:selected, popover.background radiobutton.button:backdrop:selected, notebook > header > tabs > arrow.button:backdrop:selected, headerbar.selection-mode .activatable.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) .activatable.subtitle:backdrop:link, row:backdrop:selected, headerbar.selection-mode row.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) row.subtitle:backdrop:link, calendar:backdrop:selected, headerbar.selection-mode calendar.subtitle:backdrop:link, .selection-mode.titlebar:not(headerbar) calendar.subtitle:backdrop:link, button.button.sidebar-button:backdrop:selected, button.button.titlebutton:backdrop:selected { color: #7d7d7d; }
+
+.monospace { font-family: monospace; }
+
+
+
+
 /***********
  * LightDM *
  ***********/
