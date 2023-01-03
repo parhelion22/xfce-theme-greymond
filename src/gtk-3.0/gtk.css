@@ -508,7 +508,7 @@ expander arrow:checked {
  ********************************/
 
 headerbar {
-	background-color: @default_bg_normal;
+	background-color: #00ff00;
 	border-bottom: solid 1px shade(@default_bg_normal, .8);
 	padding: 7px;
 }
