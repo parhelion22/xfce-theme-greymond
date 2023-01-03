@@ -519,17 +519,11 @@ headerbar.titlebar button.titlebutton.minimize {
 	-gtk-icon-style: regular;
 }
 
-/*decoration {
+decoration:backdrop {
     background-color: #00ff00;
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
-}*/
-
-decoration {
-    border-radius: 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23), 0 0 0 20px transparent; }
-    .tiled decoration:backdrop, .tiled-top decoration:backdrop, .tiled-right decoration:backdrop, .tiled-bottom decoration:backdrop, .tiled-left decoration:backdrop {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18), 0 0 0 20px transparent; }
+}
 
 /****************************
  * application notification *
