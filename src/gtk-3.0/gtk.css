@@ -506,8 +506,6 @@ expander arrow:checked {
 /********************************
  * CSD header and window border *
  ********************************/
-
-/*
 headerbar {
 	background-color: @default_bg_normal;
 	border-bottom: solid 1px shade(@default_bg_normal, .8);
@@ -521,11 +519,10 @@ headerbar.titlebar button.titlebutton.minimize {
 }
 
 decoration {
-    background-color: #00ff00;
+	background-color: @default_bg_normal;
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
-*/
 
 /****************************
  * application notification *
