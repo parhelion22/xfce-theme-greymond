@@ -1,6 +1,6 @@
-# Greyleigh GTK theme
+# Greymond GTK theme
 
-![Screenshot](https://github.com/parhelion22/xfce-theme-greyleigh/blob/main/Screenshot.png)
+![Screenshot](https://github.com/parhelion22/xfce-theme-greymond/blob/main/Screenshot.png)
 
 GTK theme providing a consistent look for GTK2 and GTK3, based on the classic "Raleigh" theme.
 
