@@ -524,6 +524,12 @@ decoration {
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
 
+window {
+	background-color: @default_bg_normal;
+	border: solid 3px @default_bg_normal;
+	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
+  }
+
 /****************************
  * application notification *
  ****************************/
