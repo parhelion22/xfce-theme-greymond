@@ -515,7 +515,9 @@ headerbar {
 headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
 headerbar.titlebar button.titlebutton.minimize {
-	-gtk-icon-style: regular;
+	background-color: @default_bg_normal;
+	border: solid 3px @default_bg_normal;
+	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
 
 decoration {
