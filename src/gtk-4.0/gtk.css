@@ -508,16 +508,14 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-color: @default_bg_normal;
-	border: solid 3px @default_bg_normal;
-	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
+	border-bottom: solid 1px shade(@default_bg_normal, .8);
+	padding: 7px;
 }
 
 headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
 headerbar.titlebar button.titlebutton.minimize {
-	background-color: @default_bg_normal;
-	border: solid 3px @default_bg_normal;
-	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
+	-gtk-icon-style: regular;
 }
 
 decoration {
@@ -531,13 +529,6 @@ window {
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
   }
-  
-window.csd {
-  background-color: @default_bg_normal;
-	border: solid 3px @default_bg_normal;
-	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
-  }
-
 
 /****************************
  * application notification *
