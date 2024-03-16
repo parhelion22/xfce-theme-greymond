@@ -508,7 +508,8 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-color: @default_bg_normal;
-	border-bottom: solid 1px shade(@default_bg_normal, .8);
+	border: solid 3px @default_bg_normal;
+	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 	padding: 7px;
 }
 
