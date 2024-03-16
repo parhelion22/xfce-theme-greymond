@@ -511,6 +511,7 @@ headerbar {
 	border-bottom: solid 1px shade(@default_bg_normal, .8);
 	padding: 7px;
 }
+
 /*
 headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
@@ -523,12 +524,13 @@ decoration {
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
+*/
 
 window {
 	background-color: @default_bg_normal;
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
-  }*/
+  }
 
 /****************************
  * application notification *
