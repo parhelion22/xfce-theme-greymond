@@ -507,12 +507,9 @@ expander arrow:checked {
  * CSD header and window border *
  ********************************/
 headerbar {
-	background-color: @default_bg_normal;
-	border-bottom: solid 1px shade(@default_bg_normal, .8);
 	padding: 7px;
 }
 
-/*
 headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
 headerbar.titlebar button.titlebutton.minimize {
@@ -524,7 +521,7 @@ decoration {
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
-*/
+
 
 window {
 	background-color: @default_bg_normal;
