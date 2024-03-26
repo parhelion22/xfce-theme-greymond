@@ -508,7 +508,8 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-color: @default_bg_normal;
-	border: solid 2px;
+	border: solid 3px @default_bg_normal;
+  border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
 
 headerbar.titlebar button.titlebutton.close,
