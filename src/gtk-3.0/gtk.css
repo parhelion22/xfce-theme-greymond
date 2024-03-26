@@ -515,11 +515,13 @@ headerbar {
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
 
+/*
 headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
 headerbar.titlebar button.titlebutton.minimize {
 	-gtk-icon-style: regular;
 }
+*/
 
 /* notwendig für gcolor
 decoration {
