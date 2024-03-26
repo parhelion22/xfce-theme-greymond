@@ -508,10 +508,7 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-color: @default_bg_normal;
-	border-top: solid 30px;
-	border-bottom: solid 2px;
-	border-left: solid 2px;
-	border-right: solid 2px;
+	border: solid 2px;
 }
 
 headerbar.titlebar button.titlebutton.close,
