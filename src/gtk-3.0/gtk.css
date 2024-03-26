@@ -512,7 +512,6 @@ headerbar {
 	border-bottom: solid 2px;
 	border-left: solid 2px;
 	border-right: solid 2px;
-	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
 
 headerbar.titlebar button.titlebutton.close,
