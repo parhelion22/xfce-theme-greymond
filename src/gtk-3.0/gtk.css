@@ -508,20 +508,18 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-color: @default_bg_normal;
-	border-top: solid 3px;
+	border-top: solid 30px;
 	border-bottom: solid 2px;
 	border-left: solid 2px;
 	border-right: solid 2px;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
 
-/*
 headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
 headerbar.titlebar button.titlebutton.minimize {
 	-gtk-icon-style: regular;
 }
-*/
 
 /* notwendig für gcolor
 decoration {
