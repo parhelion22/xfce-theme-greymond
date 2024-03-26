@@ -510,6 +510,7 @@ headerbar {
 	background-color: @default_bg_normal;
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
+	padding: 5px;
 }
 
 headerbar.titlebar button.titlebutton.close,
