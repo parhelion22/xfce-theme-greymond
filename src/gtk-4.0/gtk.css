@@ -507,6 +507,7 @@ expander arrow:checked {
  * CSD header and window border *
  ********************************/
 headerbar {
+  background-color: @default_bg_normal;
 	padding: 7px;
 }
 

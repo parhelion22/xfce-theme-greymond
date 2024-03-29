@@ -507,36 +507,7 @@ expander arrow:checked {
  * CSD header and window border *
  ********************************/
 headerbar {
-	background-color: @default_bg_normal;
-	border: solid 3px @default_bg_normal;
-  border-image: url("assets/window-decoration.png") 2 / 2px stretch;
-}
-
-headerbar.titlebar button.titlebutton.close,
-headerbar.titlebar button.titlebutton.maximize,
-headerbar.titlebar button.titlebutton.minimize {
-	-gtk-icon-style: regular;
-}
-
-/* notwendig für gcolor
-decoration {
-	background-color: @default_bg_normal;
-	border: solid 3px @default_bg_normal;
-	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
-}
-
-/* notwendig für gnome-disks, aber erscheint auch in Dialogfeldern
-/*window {
-	background-color: @default_bg_normal;
-	border: solid 3px @default_bg_normal;
-	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
-  }
-*/
-
-/* previous version:
-headerbar {
-	background-color: @default_bg_normal;
-	border-bottom: solid 1px shade(@default_bg_normal, .8);
+  background-color: @default_bg_normal;
 	padding: 7px;
 }
 
@@ -551,8 +522,14 @@ decoration {
 	border: solid 3px @default_bg_normal;
 	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
 }
-*/
 
+
+window {
+	background-color: @default_bg_normal;
+	border: solid 3px @default_bg_normal;
+	border-image: url("assets/window-decoration.png") 2 / 2px stretch;
+  }
+  
 /****************************
  * application notification *
  ****************************/
