@@ -576,7 +576,7 @@ toolbar separator {
 }
 
 /*************
- * Statusbar *
+ * statusbar *
  *************/
 
 statusbar frame {
@@ -636,7 +636,7 @@ paned.vertical > separator {
 }
 
 /**********
- * Frames *
+ * frames *
  **********/
 /*
 
@@ -660,6 +660,12 @@ frame > border {
 frame > label {
 	margin-left: 4px;
 }
+
+/******************
+ * scrolledwindow *
+ ******************/
+scrolledwindow {
+	border-image: url("assets/frame-etched-in.png") 2 / 2px stretch;}
 
 /**************
  * button box *
