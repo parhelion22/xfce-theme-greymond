@@ -814,32 +814,45 @@ switch {
 	background: url("assets/checkbox-unchecked.png") no-repeat center;
 	color: transparent;
 }
+
+switch:focus {
+	outline-color: #000000;
+  outline-style: dotted;
+  outline-offset: -3px;
+  outline-width: 1px;
+}
+
 switch:hover {
 	background: url("assets/checkbox-unchecked.png") no-repeat center;
 	background-color: @default_bg_prelight;
 	color: transparent;
 }
+
 switch:checked {
 	background: url("assets/checkbox-checked.png") no-repeat center;
 	color: transparent;
 }
+
 switch:checked:hover {
 	background: url("assets/checkbox-checked.png") no-repeat center;
 	background-color: @default_bg_prelight;
 	color: transparent;
 }
+
 switch:disabled {
 	background: url("assets/checkbox-unchecked-disabled.png") no-repeat center;
 	background-color: @default_bg_insensitive;
 	color: transparent;
 	text-shadow: none;
 }
+
 switch:checked:disabled {
 	background: url("assets/checkbox-checked-disabled.png") no-repeat center;
 	background-color: @default_bg_insensitive;
 	color: transparent;
 	text-shadow: none;
 }
+
 switch slider {
 	background: none;
 }
