@@ -322,14 +322,8 @@ entry:disabled {
 .view text {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-}
 
-textview {
-  color: #ff0000;
-  background-color: #00ff00; }
-  textview text:selected, textview text selection, textview text:selected:focus, textview text selection:focus {
-    color: @theme_selected_fg_color;
-    background-color: @theme_selected_bg_color; }
+}
 
 /***************
  * Spin Button *
