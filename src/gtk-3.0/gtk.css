@@ -286,6 +286,50 @@ check:indeterminated:disabled {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-disabled.png"));
 }
 
+
+/**********
+ * switch *
+ **********/
+switch {
+	background: url("assets/checkbox-unchecked.png") no-repeat center;
+	color: transparent;
+}
+
+switch:hover {
+	background: url("assets/checkbox-unchecked.png") no-repeat center;
+	background-color: @default_bg_prelight;
+	color: transparent;
+}
+
+switch:checked {
+	background: url("assets/checkbox-checked.png") no-repeat center;
+	color: transparent;
+}
+
+switch:checked:hover {
+	background: url("assets/checkbox-checked.png") no-repeat center;
+	background-color: @default_bg_prelight;
+	color: transparent;
+}
+
+switch:disabled {
+	background: url("assets/checkbox-unchecked-disabled.png") no-repeat center;
+	background-color: @default_bg_insensitive;
+	color: transparent;
+	text-shadow: none;
+}
+
+switch:checked:disabled {
+	background: url("assets/checkbox-checked-disabled.png") no-repeat center;
+	background-color: @default_bg_insensitive;
+	color: transparent;
+	text-shadow: none;
+}
+
+switch slider {
+	background: none;
+}
+
 /****************
  * radio button *
  ****************/
@@ -823,56 +867,6 @@ levelbar block {
 levelbar block.filled {
 	background: @colored_bg_prelight;
 	border-image: url("assets/progress.png") 2 / 2px stretch;
-}
-
-/**********
- * switch *
- **********/
-switch {
-	background: url("assets/checkbox-unchecked.png") no-repeat center;
-	color: transparent;
-}
-
-switch:focus {
-	outline-color: #000000;
-  outline-style: dotted;
-  outline-offset: -3px;
-  outline-width: 1px;
-}
-
-switch:hover {
-	background: url("assets/checkbox-unchecked.png") no-repeat center;
-	background-color: @default_bg_prelight;
-	color: transparent;
-}
-
-switch:checked {
-	background: url("assets/checkbox-checked.png") no-repeat center;
-	color: transparent;
-}
-
-switch:checked:hover {
-	background: url("assets/checkbox-checked.png") no-repeat center;
-	background-color: @default_bg_prelight;
-	color: transparent;
-}
-
-switch:disabled {
-	background: url("assets/checkbox-unchecked-disabled.png") no-repeat center;
-	background-color: @default_bg_insensitive;
-	color: transparent;
-	text-shadow: none;
-}
-
-switch:checked:disabled {
-	background: url("assets/checkbox-checked-disabled.png") no-repeat center;
-	background-color: @default_bg_insensitive;
-	color: transparent;
-	text-shadow: none;
-}
-
-switch slider {
-	background: none;
 }
 
 /************
