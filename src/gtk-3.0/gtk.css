@@ -231,76 +231,94 @@ scrollbar.horizontal button.down {
 	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
-/**************
- * checkboxes *
- **************/
-check, radio {
+/************
+ * checkbox *
+ ************/
+check, .view.cellcheck {
 	margin: .3em .4em .3em .3em;
 	min-height: 16px;
 	min-width: 16px;
+  -gtk-icon-source: url("assets/checkbox-unchecked.png");
 }
-checkbutton:focus, radiobutton:focus {
+
+checkbutton:focus{
 	outline-color: #000000;
   	outline-style: dotted;
   	outline-offset: -3px;
   	outline-width: 1px;
 }
+
 checkbutton:hover, radiobutton:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
 }
+
 checkbutton:disabled, radiobutton:disabled {
 	color: @default_fg_insensitive;
 	text-shadow: 1px 1px white;
 }
+
 checkbutton label, radiobutton label {
 	padding-right: .5em;
 }
+
 check:disabled, radio:disabled {
 	border-color: @default_base_insensitive;
 }
-check {
-	-gtk-icon-source: url("assets/checkbox-unchecked.png");
-}
+
 check:checked {
 	-gtk-icon-source: url("assets/checkbox-checked.png");
 }
+
 check:checked:disabled {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-disabled.png"));
 }
+
 check:disabled {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-disabled.png"));
 }
+
 check:indeterminated {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"));
 }
+
 check:indeterminated:disabled {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-disabled.png"));
 }
 
-/******************
- * radion buttons *
- ******************/
-radio,
-.view.cellradio {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"));
+/****************
+ * radio button *
+ ****************/
+
+radio, .view.cellradio {
 	margin: .3em .4em .3em .3em;
 	min-height: 16px;
 	min-width: 16px;
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"));
 }
+
+radiobutton:focus {
+	outline-color: #000000;
+  	outline-style: dotted;
+  	outline-offset: -3px;
+  	outline-width: 1px;
+}
+
 radio:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"));
 }
+
 radio:disabled {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.png"));
 }
+
 radio:checked:disabled {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.png"));
 }
 
-/****************
- * text entries *
- ****************/
+/**************
+ * text entry *
+ **************/
 entry {	
 	border-image: url("assets/entry.png") 2 / 2px stretch;
 	padding: 4px;
@@ -316,9 +334,9 @@ entry:disabled {
 	color: @default_text_insensitive;
 }
 
-/****************
- * text fields  *
- ****************/
+/***************
+ * text field  *
+ ***************/
 .view text {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
@@ -326,7 +344,7 @@ entry:disabled {
 }
 
 /***************
- * Spin Button *
+ * spin button *
  ***************/
 spinbutton:disabled {
 	color: @default_text_insensitive;
@@ -347,9 +365,9 @@ combobox button:first-child arrow {
 	padding-left: .5em;
 }
 
-/*********
- * Menus *
- *********/
+/********
+ * menu *
+ ********/
 menubar {
 	border-image: url("assets/button.png") 2 / 2px stretch;
 	min-height: 24px;
@@ -398,9 +416,9 @@ menuitem > arrow {
 	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 
-/*************
- * Notebooks *
- *************/
+/************
+ * notebook *
+ ************/
 notebook.frame > stack {
 	border-image: url("assets/notebook.png") 2 / 2px stretch;
 	padding: 2px;
@@ -493,7 +511,7 @@ notebook tab button {
 }
 
 /************
- * Expander *
+ * expander *
  ************/
 expander arrow {
 	min-width: 16px;
