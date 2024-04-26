@@ -286,6 +286,35 @@ check:indeterminated:disabled {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-disabled.png"));
 }
 
+/****************
+ * radio button *
+ ****************/
+
+radio, .view.cellradio {
+	margin: .3em .4em .3em .3em;
+	min-height: 16px;
+  min-width: 16px;
+  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"));
+}
+
+radiobutton:focus {
+	outline-color: #000000;
+  outline-style: dotted;
+  outline-offset: -3px;
+  outline-width: 1px;
+}
+
+radio:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"));
+}
+
+radio:disabled {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.png"));
+}
+
+radio:checked:disabled {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.png"));
+}
 
 /**********
  * switch *
@@ -326,39 +355,25 @@ switch:checked:disabled {
 	text-shadow: none;
 }
 
+/*
 switch slider {
-	background: none;
-}
-
-/****************
- * radio button *
- ****************/
-
-radio, .view.cellradio {
-	margin: .3em .4em .3em .3em;
-	min-height: 16px;
-	min-width: 16px;
-  -gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"));
-}
-
-radiobutton:focus {
+	background: #0ff;
 	outline-color: #000000;
-  	outline-style: dotted;
-  	outline-offset: -3px;
-  	outline-width: 1px;
+  outline-style: dotted;
+  outline-offset: -3px;
+  outline-width: 1px;
+  margin-left: 12px;
 }
 
-radio:checked {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"));
+switch slider:checked {
+	background: #0ff;
+	outline-color: #000000;
+  outline-style: dotted;
+  outline-offset: -3px;
+  outline-width: 1px;
+  margin-left: -12px;
 }
-
-radio:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.png"));
-}
-
-radio:checked:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.png"));
-}
+*/
 
 /**************
  * text entry *
@@ -384,7 +399,6 @@ entry:disabled {
 .view text {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-
 }
 
 /***************
