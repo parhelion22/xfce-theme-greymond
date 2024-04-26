@@ -1183,6 +1183,7 @@ XfdesktopIconView.view .rubberband {
   	-XfwmTabwinWidget-icon-size: 32px;
   	-XfwmTabwinWidget-preview-size: 32px;
 }
+
 #xfwm-tabwin button {
    	/*border-image: url("assets/button.png") 2 / 2px stretch;*/
 	background-color: @default_bg_normal;
