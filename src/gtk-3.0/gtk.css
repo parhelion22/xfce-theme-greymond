@@ -324,6 +324,13 @@ entry:disabled {
 	color: @default_text_normal;
 }
 
+textview {
+  color: #ff0000;
+  background-color: #00ff00; }
+  textview text:selected, textview text selection, textview text:selected:focus, textview text selection:focus {
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color; }
+
 /***************
  * Spin Button *
  ***************/
@@ -660,14 +667,6 @@ frame > border {
 frame > label {
 	margin-left: 4px;
 }
-
-/******************
- * scrolledwindow *
- ******************/
-scrolledwindow {
-  border-width: 1px;
-  border-style: solid;
-  border-color: @borders;  }
 
 /**************
  * button box *
