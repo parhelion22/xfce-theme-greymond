@@ -665,7 +665,9 @@ frame > label {
  * scrolledwindow *
  ******************/
 scrolledwindow {
-	border-image: url("assets/frame-etched-in.png") 2 / 2px stretch;}
+  border-width: 1px;
+  border-style: solid;
+  border-color: @borders;  }
 
 /**************
  * button box *
