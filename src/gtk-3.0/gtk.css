@@ -48,6 +48,9 @@
 	-GtkWidget-link-color: @link_fg_normal;
 /*    -GtkWidget-cursor-aspect-ratio: 0.1;*/
 }
+box, toolbar, widget {
+  border-width: 0px;
+}
 .background {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
@@ -145,7 +148,7 @@ button:disabled, .button:disabled {
 	color: @default_fg_insensitive;
 	text-shadow: 1px 1px white;
 	-gtk-icon-effect: dim;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset -1 -1 #000000, inset 1 1 #ffffff;
+  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
 }
 button.link {
 	color: @link_fg_normal;
@@ -179,7 +182,6 @@ scrollbar{
 	border-bottom: solid 1px shade(@default_bg_normal, 1.15);
 	border-right: solid 1px shade(@default_bg_normal, 1.15);
 }
-
 scrollbar button,
 scrollbar button:hover,
 scrollbar button:active,
@@ -210,7 +212,6 @@ scrollbar button:disabled {
 	background-color: @default_bg_insensitive;
 	color: @default_fg_insensitive;
 }
-
 scrollbar slider {
 	background: @default_bg_normal;
 	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
@@ -336,9 +337,11 @@ entry:disabled {
 /****************
  * text fields  *
  ****************/
-.view text {
+textview{
 	background-color: @default_base_normal;
 	color: @default_text_normal;
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 #000000, inset -1 -1 #ffffff, inset 1 1 #837f78;
+  padding: 4px;
 }
 
 /***************
@@ -357,6 +360,10 @@ combobox arrow {
 	margin: -.1em;
 	min-height: 1.5em;
 	min-width: 1.5em;
+}
+combobox arrow:insensitive {
+	color: @default_fg_insensitive;
+	-gtk-icon-effect: dim;
 }
 combobox button:first-child arrow {
 	border-image: url("assets/combobox-arrow-separator.png") 2 / 2px stretch;
@@ -556,7 +563,7 @@ popover.background {
 }
 popover.background modelbutton:hover {
 	background: @colored_bg_prelight;
-    	color:  @colored_fg_prelight;
+  color:  @colored_fg_prelight;
 }
 popover .flat {
 	padding: 5px;
@@ -1029,11 +1036,11 @@ spinner:checked {
 }
 #whiskermenu-button image,
 #applicationmenu-button image {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 #whiskermenu-button label,
 #applicationmenu-button label {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 #whiskermenu-button:hover {
 	background-color: @default_bg_prelight;
@@ -1043,12 +1050,11 @@ spinner:checked {
 #whiskermenu-button:active {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 #000000, inset -1 -1 #ebeae8, inset 1 1 #837f78;
 }
 #whiskermenu-button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 #000000, inset -1 -1 #ebeae8, inset 1 1 #837f78;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 #000000, inset 3 3 #837f78, inset -3 -3 #ebeae8, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 #whiskermenu-window {
 	background-color: @default_bg_normal;
@@ -1079,7 +1085,7 @@ spinner:checked {
 #whiskermenu-window button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 #000000, inset -1 -1 #ebeae8, inset 1 1 #837f78;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 #000000, inset 3 3 #837f78, inset -3 -3 #ebeae8, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 #whiskermenu-window treeview {
 	background-color: @default_bg_normal;
