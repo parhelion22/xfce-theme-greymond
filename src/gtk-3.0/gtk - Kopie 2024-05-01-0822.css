@@ -35,7 +35,7 @@
 @define-color link_fg_normal			      #000080;
 
 /* notification */
-@define-color info_bg_normal 			      #FFFFBF;
+@define-color info_bg_normal 			      #CCC9C2; /* #BFE1FF */
 @define-color warning_bg_normal		      #FCAF3E;
 @define-color question_bg_normal	      #8CB0D7;
 @define-color error_bg_normal			      #F03838;
@@ -662,25 +662,24 @@ scale trough {
 	border: solid 1px shade(@default_bg_normal, 0.64);
 	border-bottom: solid 1px shade(@default_bg_normal, 1.15);
 	border-right: solid 1px shade(@default_bg_normal, 1.15);
-  background-color: @default_bg_active;
+    background-color: @default_bg_active;
 }
 
 scale trough:focus {
 	outline-color: #000000;
-  outline-style: dotted;
-  outline-offset: 1px;
-  outline-width: 1px;
+  	outline-style: dotted;
+  	outline-offset: 1px;
+  	outline-width: 1px;
 }
 scale {
 	margin: 1px;
 }
 scale slider {
 	background: @default_bg_normal no-repeat center;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	border-image: url("assets/scale-slider-border.png") 2 / 2px stretch;
 }
 scale slider:hover {
-	background-color: @default_bg_prelight;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_prelight, inset 1 1 #ffffff, inset -1 -1 #000000;
+	background-color: shade(@default_bg_normal, 1.05);
 }
 scale trough:disabled {
 	background-color: @default_bg_normal;
@@ -738,16 +737,17 @@ scale.color.vertical slider {
  ***************/
 progressbar trough {
 	background: @colored_bg_normal;
-  box-shadow: inset 1 1 #837f78, inset -1 -1 #ebeae8;
-padding: 1px;
+	border: solid 1px shade(@default_bg_normal, 0.64);
+	border-bottom: solid 1px shade(@default_bg_normal, 1.15);
+	border-right: solid 1px shade(@default_bg_normal, 1.15);
 }
 progressbar {
 	font-size: .8em;
 }
 progressbar progress {
 	background: @colored_bg_prelight;
+	border-image: url("assets/progress.png") 2 / 2px stretch;
 	color: @default_fg_normal;
-  box-shadow: inset -2 -2 #3a4956, inset 2 2 #4b6983, inset 1 1 #5b89b1, inset -1 -1 #000000;
 }
 progressbar.horizontal,
 progressbar.horizontal trough {
@@ -775,7 +775,7 @@ levelbar block {
 }
 levelbar block.filled {
 	background: @colored_bg_prelight;
-  box-shadow: inset -2 -2 #3a4956, inset 2 2 #4b6983, inset 1 1 #5b89b1, inset -1 -1 #000000;
+	border-image: url("assets/progress.png") 2 / 2px stretch;
 }
 
 /**********
@@ -849,18 +849,16 @@ calendar {
 	padding: 2px;
 }
 calendar.header {
-	background-color: @default_bg_normal;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
-	padding: 2px;
+	background: @default_bg_normal;
 }
 calendar.view {
-	box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 #000000, inset -1 -1 #ffffff, inset 1 1 #837f78;
+	box-shadow: inset 2 2 #ffffff, inset -2 -2 #938e84, inset 1 1 #938e84, inset -1 -1 #ffffff;
 }
 calendar:indeterminate {
-	color: @default_text_insensitive;
+	color: alpha(@default_fg_normal, 0.4);
 }
 calendar.highlight {
-	background-color: @default_text_insensitive;
+	background-color: @default_bg_prelight;
 	color: @default_fg_selected;
 }
 
@@ -872,19 +870,15 @@ calendar.highlight {
 }
 .info {
 	background-color: @info_bg_normal;
-  box-shadow: inset -2 -2 #dfdf58, inset 2 2 @info_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
 }
 .warning {
 	background-color: @warning_bg_normal;
-  box-shadow: inset -2 -2 #b77b24, inset 2 2 @warning_bg_normal, inset 1 1 #ffd598, inset -1 -1 #000000;
 }
 .question {
 	background-color: @question_bg_normal;
-  box-shadow: inset -2 -2 #527aa5, inset 2 2 @question_bg_normal, inset 1 1 #d7e6f6, inset -1 -1 #000000;
 }
 .error {
 	background-color: @error_bg_normal;
-  box-shadow: inset -2 -2 #a52929, inset 2 2 @error_bg_normal, inset 1 1 #ff8080, inset -1 -1 #000000;
 }
 
 /***********
@@ -1094,6 +1088,7 @@ spinner:checked {
 	color: @colored_fg_prelight;
 }
 
+
 /***************
  * XFCE4 Panel *
  ***************/
@@ -1106,6 +1101,8 @@ spinner:checked {
 .xfce4-panel.background button:active, .xfce4-panel.background button:checked {
   box-shadow: inset -4 -4 @default_bg_active, inset 4 4 #000000, inset 3 3 #837f78, inset -3 -3 #ebeae8, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
+
+
 
 /*****************
  * XFCE4 Desktop *
@@ -1123,13 +1120,15 @@ XfdesktopIconView.view:active {
  * XFCE4 Session Logout Dialog *
  *******************************/
 .xfsm-logout-dialog {
-	border: 0px solid;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 #ffffff, inset 1 1 #000000, inset -1 -1 #000000;
+    border-image: url("assets/window-decoration.png") 2 / 2px stretch;
+}
+.xfsm-logout-dialog button {
 }
 
 /************************
  * XFCE4 Alt-Tab dialog *
  ***********************/
+
 #xfwm-tabwin {  	
   background-color: @default_bg_normal;
   color: @default_fg_normal;
