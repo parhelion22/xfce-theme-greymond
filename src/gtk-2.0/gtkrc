@@ -24,13 +24,13 @@ style "Default"
 	text[ACTIVE]		    = "#FFFFFF" 
 	text[INSENSITIVE]	  = "#8F8D88" #0.7 bg[NORMAL]
 
-	GtkWidget::link-color				= "#000080"
-	GtkWidget::visited-link-color		= "#000080"
-	GtkHTML::alink_color				= "#000080"
-	GtkHTML::link_color					= "#000080"
-	GtkHTML::vlink_color				= "#000080"
-	GnomeHref::link_color				= "#000080"
-	GtkIMHtml::hyperlink-color			= "#000080"
+	GtkWidget::link-color				        = "#000080"
+	GtkWidget::visited-link-color	      = "#000080"
+	GtkHTML::alink_color				        = "#000080"
+	GtkHTML::link_color					        = "#000080"
+	GtkHTML::vlink_color				        = "#000080"
+	GnomeHref::link_color				        = "#000080"
+	GtkIMHtml::hyperlink-color		      = "#000080"
 	GtkIMHtml::hyperlink-prelight-color	= "#000080"
 }
 
