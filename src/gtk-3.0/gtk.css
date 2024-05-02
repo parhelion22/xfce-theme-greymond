@@ -351,7 +351,7 @@ entry:disabled {
 /****************
  * text fields  *
  ****************/
-textview{
+textview {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
   box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
@@ -439,10 +439,10 @@ menuitem > arrow {
  *************/
 notebook.frame > stack {
 	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  padding: 2px;
 }
 notebook header.top tabs {
 	margin-top: .2em;
-  margin-bottom: -10px;
 }
 /*notebook header:focus tabs {
 		outline-color: default_fg_normal;
