@@ -3,31 +3,31 @@
 @define-color default_fg_prelight 		  #000000;
 @define-color default_fg_selected 		  #FFFFFF;
 @define-color default_fg_active 		    #000000;
-@define-color default_fg_insensitive 	  #8F8D88;
+@define-color default_fg_insensitive 	  #8F8D88; /* 0.7 default_bg_normal */
 
 @define-color default_bg_normal 		    #CCC9C2;
-@define-color default_bg_prelight 		  #E0DDD5;
+@define-color default_bg_prelight 		  #E0DDD5; /* 1.1 default_bg_normal */
 @define-color default_bg_selected 		  #4B6983;
-@define-color default_bg_active 		    #B8B5AF;
-@define-color default_bg_insensitive 	  #CCC9C2;
+@define-color default_bg_active 		    #B8B5AF; /* 0.9 default_bg_normal */
+@define-color default_bg_insensitive 	  #CCC9C2; /* default_bg_normal */
 
 @define-color default_base_normal 		  #FFFFFF;
 @define-color default_base_prelight 	  #FFFFFF;
-@define-color default_base_selected 	  #4B6983;
-@define-color default_base_active		    #8F8D88;
-@define-color default_base_insensitive  #E0DDD5;
+@define-color default_base_selected 	  #4B6983; /* default_bg_selected */
+@define-color default_base_active		    #8F8D88; /* 0.7 default_bg_normal */
+@define-color default_base_insensitive  #E0DDD5; /* 1.1 default_bg_normal */
 
 @define-color default_text_normal 		  #000000;
 @define-color default_text_prelight 	  #000000;
 @define-color default_text_selected 	  #FFFFFF;
 @define-color default_text_active 		  #FFFFFF;
-@define-color default_text_insensitive	#8F8D88;
+@define-color default_text_insensitive	#8F8D88; /* 0.7 default_bg_normal */
 
 /* colored */
 @define-color colored_fg_prelight 		  #FFFFFF;
 
-@define-color colored_bg_normal 		    #B8B5AF;
-@define-color colored_bg_prelight 		  #4B6983;
+@define-color colored_bg_normal 		    #B8B5AF; /* 0.9 default_bg_normal */
+@define-color colored_bg_prelight 		  #4B6983; /* default_bg_selected */
 
 @define-color colored_text_prelight     #FFFFFF;
 
@@ -48,16 +48,13 @@
 	-GtkWidget-link-color: @link_fg_normal;
 /*    -GtkWidget-cursor-aspect-ratio: 0.1;*/
 }
-box, toolbar, widget {
-  border-width: 0px;
-}
 .background {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
 }
 /**:disabled {
 	color: @default_fg_insensitive;
-	text-shadow: 1px 1px #FFFFFF;
+	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3;
 	-gtk-icon-effect: dim;
 }*/
 .flat:not(:hover):not(:checked) {
@@ -90,7 +87,7 @@ box, toolbar, widget {
  *********/
 label:disabled {
 	color: @default_fg_insensitive;
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3);
 }
 
 /*************
@@ -120,13 +117,13 @@ selection:focus,
  ***********/
 button, .button {
 	background: @default_bg_normal;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 5px;
 }
 button:hover, .button:hover, button.link:hover  {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_prelight, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
 }
 button:active, .button:active,
 button:active:hover, .button:active:hover,
@@ -135,10 +132,15 @@ button.toggle:active:hover,
 stackswitcher button:checked {	
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 #000000, inset -1 -1 #ebeae8, inset 1 1 #837f78;
+  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
+}
+button.toggle:checked:hover {
+	background-color: @default_bg_prelight;
+	color: @default_fg_prelight;
+  box-shadow: inset -2 -2 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 1.3), inset 1 1 shade(@default_bg_prelight, 0.7);
 }
 button:focus, .button:focus {
-	outline-color: #000000;
+	outline-color: default_fg_normal;
   outline-style: dotted;
   outline-offset: -4px;
   outline-width: 1px;
@@ -148,7 +150,6 @@ button:disabled, .button:disabled {
 	color: @default_fg_insensitive;
 	text-shadow: 1px 1px white;
 	-gtk-icon-effect: dim;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
 }
 button.link {
 	color: @link_fg_normal;
@@ -156,17 +157,17 @@ button.link {
 }
 button.link:hover {
 	color: @link_fg_normal;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_prelight, inset -1 -1 #000000, inset 1 1 #ffffff;
+  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
 }
 button.link:active {
 	color: @link_fg_normal;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 #000000, inset -1 -1 #ebeae8, inset 1 1 #837f78;
+  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
 }
 button.link > label {
 	text-decoration-line: underline;
 }
 button.color * {
-	box-shadow: inset 2 2 #938e84, inset -2 -2 #ffffff, inset 1 1 #ffffff, inset -1 -1 #938e84;
+	box-shadow: inset 2 2 shade(@default_bg_normal, 0.7), inset -2 -2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0.7);
 	margin: 1px;
 	margin-left: 15px;
 	margin-right: 15px;
@@ -177,10 +178,9 @@ button.color * {
  * scrollbars *
  **************/
 scrollbar{
-	background-color: @default_bg_active;
-	border: solid 1px shade(@default_bg_normal, 0.64);
-	border-bottom: solid 1px shade(@default_bg_normal, 1.15);
-	border-right: solid 1px shade(@default_bg_normal, 1.15);
+  background-color: @default_bg_active;
+  box-shadow: inset 1 1 shade(@default_bg_active, 0.7), inset -1 -1 shade(@default_bg_active, 1.3);
+  padding: 1px;
 }
 scrollbar button,
 scrollbar button:hover,
@@ -214,11 +214,11 @@ scrollbar button:disabled {
 }
 scrollbar slider {
 	background: @default_bg_normal;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 }
 scrollbar slider:hover {
 	background-color: @default_bg_prelight;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_prelight, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
 }
 scrollbar.vertical slider {
 	min-height: 10px;
@@ -252,10 +252,10 @@ check {
 	min-width: 16px;
 }
 checkbutton:focus, radiobutton:focus {
-	outline-color: #000000;
-  	outline-style: dotted;
-  	outline-offset: -3px;
-  	outline-width: 1px;
+	outline-color: default_fg_normal;
+  outline-style: dotted;
+  outline-offset: -3px;
+  outline-width: 1px;
 }
 checkbutton:hover, radiobutton:hover {
 	background-color: @default_bg_prelight;
@@ -274,20 +274,31 @@ check:disabled, radio:disabled {
 check {
 	-gtk-icon-source: url("assets/checkbox-unchecked.png");
 }
+check:active {
+	-gtk-icon-source: url("assets/checkbox-unchecked-active.png");
+}
+check:disabled {
+	-gtk-icon-source: url("assets/checkbox-unchecked-disabled.png");
+}
+
 check:checked {
 	-gtk-icon-source: url("assets/checkbox-checked.png");
 }
+check:checked:active {
+	-gtk-icon-source: url("assets/checkbox-checked-active.png");
+}
 check:checked:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-disabled.png"));
+	-gtk-icon-source: url("assets/checkbox-checked-disabled.png");
 }
-check:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-disabled.png"));
-}
+
 check:indeterminated {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"));
+	-gtk-icon-source: url("assets/checkbox-indeterminated.png");
+}
+check:indeterminated:active {
+	-gtk-icon-source: url("assets/checkbox-indeterminated-active.png");
 }
 check:indeterminated:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed-disabled.png"));
+	-gtk-icon-source: url("assets/checkbox-indeterminated-disabled.png");
 }
 
 /******************
@@ -298,21 +309,24 @@ radio {
 	min-height: 16px;
 	min-width: 16px;
 }
-radio,
-.view.cellradio {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked.png"));
-	margin: .3em .4em .3em .3em;
-	min-height: 16px;
-	min-width: 16px;
+radio {
+	-gtk-icon-source: url("assets/radio-unchecked.png");
 }
-radio:checked {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked.png"));
+radio:active {
+	-gtk-icon-source: url("assets/radio-unchecked-active.png");
 }
 radio:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-unchecked-disabled.png"));
+	-gtk-icon-source: url("assets/radio-unchecked-disabled.png");
+}
+
+radio:checked {
+	-gtk-icon-source: url("assets/radio-checked.png");
+}
+radio:checked:active {
+	-gtk-icon-source: url("assets/radio-checked-active.png");
 }
 radio:checked:disabled {
-	-gtk-icon-source: -gtk-scaled(url("assets/radio-checked-disabled.png"));
+	-gtk-icon-source: url("assets/radio-checked-disabled.png");
 }
 
 /****************
@@ -321,7 +335,7 @@ radio:checked:disabled {
 entry {	
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 #000000, inset -1 -1 #ffffff, inset 1 1 #837f78;
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
   padding: 4px;
 }
 entry:checked {
@@ -340,7 +354,7 @@ entry:disabled {
 textview{
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 #000000, inset -1 -1 #ffffff, inset 1 1 #837f78;
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
   padding: 4px;
 }
 
@@ -375,7 +389,7 @@ combobox button:first-child arrow {
  *********/
 menubar {
 	min-height: 24px;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 }
 menubar decoration,
 .popup decoration {
@@ -384,7 +398,7 @@ menubar decoration,
 menu {
 	background: @default_bg_normal;
 	padding: 2px;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 #ffffff, inset 1 1 #000000, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
 }
 menubar > menuitem {
 	margin: 1px;
@@ -403,7 +417,7 @@ menuitem:hover {
 	color: @colored_fg_prelight;
 }
 menu separator {
-	border-image: url("assets/separator-horizontal.png") 1 / 1px stretch;
+box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 	margin: .2em .4em;
 	padding: 1px;
 }
@@ -424,14 +438,14 @@ menuitem > arrow {
  * notebooks *
  *************/
 notebook.frame > stack {
-	border-image: url("assets/notebook.png") 2 / 2px stretch;
-	padding: 2px;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 }
 notebook header.top tabs {
 	margin-top: .2em;
+  margin-bottom: -10px;
 }
 /*notebook header:focus tabs {
-	outline-color: #000000;
+		outline-color: default_fg_normal;
   	outline-style: dotted;
   	outline-offset: -4px;
   	outline-width: 1px;
@@ -449,16 +463,15 @@ notebook header.right tabs {
 notebook tab {
 	background: @default_bg_active;
 	color: @default_fg_active;
-	padding: .3em .4em;
 }
 notebook tab:focus {
-	outline-color: #000000;
-  	outline-style: dotted;
-  	outline-offset: -4px;
-  	outline-width: 1px;
+	outline-color: default_fg_normal;
+  outline-style: dotted;
+  outline-offset: -4px;
+  outline-width: 1px;
 }
 notebook header.top tab {
-	border-image: url("assets/notebook-tab-top.png") 2 / 2px stretch;
+  border-image: url("assets/notebook-tab-top.png") 2 / 2px stretch;
 	padding: 5px;
 }
 notebook header.bottom tab {
@@ -476,10 +489,10 @@ notebook header.right tab {
 notebook header tab:checked {
 	background: @default_bg_normal;
 	color: @default_fg_normal;
-	outline-color: #000000;
-  	outline-style: dotted;
-  	outline-offset: -4px;
-  	outline-width: 1px;
+	outline-color: default_fg_normal;
+  outline-style: dotted;
+  outline-offset: -4px;
+  outline-width: 1px;
 }
 notebook header.top tab:checked {
 	margin-bottom: -1px;
@@ -546,7 +559,7 @@ headerbar.titlebar button.titlebutton.minimize {
 .app-notification {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 7px;
 }
 .app-notification border {
@@ -558,7 +571,7 @@ headerbar.titlebar button.titlebutton.minimize {
  ************/
 popover.background {
 	background: @default_bg_normal;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 popover.background modelbutton:hover {
@@ -574,11 +587,11 @@ popover .flat {
  ***********/
 toolbar {
 	background-color: @default_bg_normal;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 toolbar separator {
-	border-image: url("assets/separator-vertical.png") 1 / 1px stretch;
+	box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 	margin: 6px;
 	padding: 1px;
 }
@@ -587,7 +600,7 @@ toolbar separator {
  * statusbar *
  *************/
 statusbar frame {
-	box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 #000000, inset -1 -1 #ebeae8, inset 1 1 #837f78;
+	box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 6px;
@@ -615,11 +628,11 @@ list row:hover {
  * separators *
  **************/
 separator.horizontal {
-  box-shadow: inset 2 2 #ffffff, inset -2 -2 #938e84, inset 1 1 #938e84, inset -1 -1 #ffffff;
+  box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 	padding: 1px;
 }
 separator.vertical {
-	box-shadow: inset 2 2 #ffffff, inset -2 -2 #938e84, inset 1 1 #938e84, inset -1 -1 #ffffff;
+	box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 	padding: 1px;
 }
 
@@ -643,7 +656,7 @@ paned.vertical > separator {
  * frames *
  **********/
 frame > border {
-  box-shadow: inset 2 2 #ffffff, inset -2 -2 #938e84, inset 1 1 #938e84, inset -1 -1 #ffffff;
+  box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 }
 frame > label {
 	margin-left: 4px;
@@ -666,14 +679,11 @@ buttonbox.horizontal button:last-child {
  * scale *
  *********/
 scale trough {
-	border: solid 1px shade(@default_bg_normal, 0.64);
-	border-bottom: solid 1px shade(@default_bg_normal, 1.15);
-	border-right: solid 1px shade(@default_bg_normal, 1.15);
   background-color: @default_bg_active;
+  box-shadow: inset 1 1 shade(@default_bg_active, 0.7), inset -1 -1 shade(@default_bg_active, 1.3);
 }
-
 scale trough:focus {
-	outline-color: #000000;
+	outline-color: default_fg_normal;
   outline-style: dotted;
   outline-offset: 1px;
   outline-width: 1px;
@@ -683,11 +693,12 @@ scale {
 }
 scale slider {
 	background: @default_bg_normal no-repeat center;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  margin: 1px;
 }
 scale slider:hover {
 	background-color: @default_bg_prelight;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_prelight, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
 }
 scale trough:disabled {
 	background-color: @default_bg_normal;
@@ -745,8 +756,8 @@ scale.color.vertical slider {
  ***************/
 progressbar trough {
 	background: @colored_bg_normal;
-  box-shadow: inset 1 1 #837f78, inset -1 -1 #ebeae8;
-padding: 1px;
+  box-shadow: inset 1 1 shade(@colored_bg_normal, 0.7), inset -1 -1 shade(@colored_bg_normal, 1.3);
+  padding: 1px;
 }
 progressbar {
 	font-size: .8em;
@@ -754,7 +765,7 @@ progressbar {
 progressbar progress {
 	background: @colored_bg_prelight;
 	color: @default_fg_normal;
-  box-shadow: inset -2 -2 #3a4956, inset 2 2 #4b6983, inset 1 1 #5b89b1, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@colored_bg_prelight, 0.7), inset 2 2 @colored_bg_prelight, inset 1 1 shade(@colored_bg_prelight, 1.3), inset -1 -1 shade(@colored_bg_prelight, 0);
 }
 progressbar.horizontal,
 progressbar.horizontal trough {
@@ -782,7 +793,7 @@ levelbar block {
 }
 levelbar block.filled {
 	background: @colored_bg_prelight;
-  box-shadow: inset -2 -2 #3a4956, inset 2 2 #4b6983, inset 1 1 #5b89b1, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@colored_bg_prelight, 0.7), inset 2 2 @colored_bg_prelight, inset 1 1 shade(@colored_bg_prelight, 1.3), inset -1 -1 shade(@colored_bg_prelight, 0);
 }
 
 /**********
@@ -815,13 +826,11 @@ switch:disabled {
 	background: url("assets/checkbox-unchecked-disabled.png") no-repeat center;
 	background-color: @default_bg_insensitive;
 	color: transparent;
-	text-shadow: none;
 }
 switch:checked:disabled {
 	background: url("assets/checkbox-checked-disabled.png") no-repeat center;
 	background-color: @default_bg_insensitive;
 	color: transparent;
-	text-shadow: none;
 }
 switch slider {
 	background: none;
@@ -841,7 +850,7 @@ switch slider {
 tooltip,
 tooltip.background  {
 	background-color: @default_bg_normal;
-	border: 1px solid #000000;
+	border: 1px solid shade(@default_bg_normal, 0);
 	color: @default_fg_normal;
 }
 tooltip *, .tooltip * {
@@ -857,11 +866,11 @@ calendar {
 }
 calendar.header {
 	background-color: @default_bg_normal;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 calendar.view {
-	box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 #000000, inset -1 -1 #ffffff, inset 1 1 #837f78;
+	box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
 }
 calendar:indeterminate {
 	color: @default_text_insensitive;
@@ -874,24 +883,21 @@ calendar.highlight {
 /************
  * infobars *
  ************/
-.info, .warning, .question, .error {
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
-}
 .info {
 	background-color: @info_bg_normal;
-  box-shadow: inset -2 -2 #dfdf58, inset 2 2 @info_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@info_bg_normal, 0.7), inset 2 2 @info_bg_normal, inset 1 1 shade(@info_bg_normal, 1.3), inset -1 -1 shade(@info_bg_normal, 0);
 }
 .warning {
 	background-color: @warning_bg_normal;
-  box-shadow: inset -2 -2 #b77b24, inset 2 2 @warning_bg_normal, inset 1 1 #ffd598, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@warning_bg_normal, 0.7), inset 2 2 @warning_bg_normal, inset 1 1 shade(@warning_bg_normal, 1.3), inset -1 -1 shade(@warning_bg_normal, 0);
 }
 .question {
 	background-color: @question_bg_normal;
-  box-shadow: inset -2 -2 #527aa5, inset 2 2 @question_bg_normal, inset 1 1 #d7e6f6, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@question_bg_normal, 0.7), inset 2 2 @question_bg_normal, inset 1 1 shade(@question_bg_normal, 1.3), inset -1 -1 shade(@question_bg_normal, 0);
 }
 .error {
 	background-color: @error_bg_normal;
-  box-shadow: inset -2 -2 #a52929, inset 2 2 @error_bg_normal, inset 1 1 #ff8080, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@error_bg_normal, 0.7), inset 2 2 @error_bg_normal, inset 1 1 shade(@error_bg_normal, 1.3), inset -1 -1 shade(@error_bg_normal, 0);
 }
 
 /***********
@@ -899,7 +905,7 @@ calendar.highlight {
  ***********/
 .sidebar {
 	background-color: @default_base_normal;
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 #000000, inset -1 -1 #ffffff, inset 1 1 #837f78;
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
 	padding: 2px;
 }
 
@@ -962,7 +968,7 @@ dialog filechooser actionbar {
  * color chooser *
  *****************/
 dialog colorchooser colorswatch {
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 dialog colorchooser colorswatch.dark * {
@@ -972,14 +978,14 @@ dialog colorchooser colorswatch.light * {
 	color: black;
 }
 dialog colorchooser #add-color-button {
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 }
 dialog colorchooser colorswatch:selected * {
 	background: transparent;
 }
 colorchooser .popover {
 	background: @default_bg_normal;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 }
 
 /****************
@@ -992,7 +998,7 @@ printdialog box {
 	background: @default_bg_normal;
 }
 printdialog notebook stack {
-	border-image: url("assets/notebook.png") 3 / 3px stretch;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 printdialog paper {
@@ -1001,7 +1007,7 @@ printdialog paper {
 }
 
 /*********************
- * Spinner Animation *
+ * spinner animation *
  *********************/
 @keyframes spin {
 	to { -gtk-icon-transform: rotate(1turn); }
@@ -1018,7 +1024,7 @@ spinner:checked {
 }
 
 /*********************
- * XFCE Heading *
+ * XFCE heading *
  *********************/
 .XfceHeading { 
 	background-color: @default_base_normal;
@@ -1027,12 +1033,12 @@ spinner:checked {
 }
 
 /*********************
- * XFCE Whisker Menu *
+ * XFCE whisker menu *
  *********************/
 #whiskermenu-button {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
-  box-shadow: inset -4 -4 #938e84, inset 4 4 @default_bg_normal, inset 3 3 #ffffff, inset -3 -3 #000000, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3 3 shade(@default_bg_normal, 1.3), inset -3 -3 shade(@default_bg_normal, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 #whiskermenu-button image,
 #applicationmenu-button image {
@@ -1045,7 +1051,7 @@ spinner:checked {
 #whiskermenu-button:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -4 -4 #938e84, inset 4 4 @default_bg_prelight, inset 3 3 #ffffff, inset -3 -3 #000000, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3 3 shade(@default_bg_prelight, 1.3), inset -3 -3 shade(@default_bg_prelight, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 #whiskermenu-button:active {
 	background-color: @default_bg_active;
@@ -1054,7 +1060,7 @@ spinner:checked {
 #whiskermenu-button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 #000000, inset 3 3 #837f78, inset -3 -3 #ebeae8, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3 3 shade(@default_bg_active, 0.7), inset -3 -3 shade(@default_bg_active, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 #whiskermenu-window {
 	background-color: @default_bg_normal;
@@ -1063,7 +1069,7 @@ spinner:checked {
 #whiskermenu-window frame {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 #ffffff, inset 1 1 #000000, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
 }
 #whiskermenu-window frame > border{
 	border: none;
@@ -1075,17 +1081,17 @@ spinner:checked {
 #whiskermenu-window button:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_prelight, inset 1 1 #ffffff, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 #000000;
 }
 #whiskermenu-window button:active {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 #000000, inset -1 -1 #ebeae8, inset 1 1 #837f78;
+  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
 }
 #whiskermenu-window button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 #000000, inset 3 3 #837f78, inset -3 -3 #ebeae8, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3 3 shade(@default_bg_active, 0.7), inset -3 -3 shade(@default_bg_active, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 #whiskermenu-window treeview {
 	background-color: @default_bg_normal;
@@ -1101,20 +1107,20 @@ spinner:checked {
 }
 
 /***************
- * XFCE4 Panel *
+ * XFCE4 panel *
  ***************/
 .xfce4-panel.background button {
-	box-shadow: inset -4 -4 #938e84, inset 4 4 @default_bg_normal, inset 3 3 #ffffff, inset -3 -3 #000000, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+	box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3 3 shade(@default_bg_normal, 1.3), inset -3 -3 shade(@default_bg_normal, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 .xfce4-panel.background button:hover {
-  box-shadow: inset -4 -4 #938e84, inset 4 4 @default_bg_prelight, inset 3 3 #ffffff, inset -3 -3 #000000, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3 3 shade(@default_bg_prelight, 1.3), inset -3 -3 shade(@default_bg_prelight, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 .xfce4-panel.background button:active, .xfce4-panel.background button:checked {
-  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 #000000, inset 3 3 #837f78, inset -3 -3 #ebeae8, inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_normal, 0), inset 3 3 shade(@default_bg_normal, 0.7), inset -3 -3 shade(@default_bg_normal, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
 
 /*****************
- * XFCE4 Desktop *
+ * XFCE4 desktop *
  *****************/
 XfdesktopIconView.view {
 	background: transparent;
@@ -1126,11 +1132,11 @@ XfdesktopIconView.view:active {
 }
 
 /*******************************
- * XFCE4 Session Logout Dialog *
+ * XFCE4 session logout dialog *
  *******************************/
 .xfsm-logout-dialog {
 	border: 0px solid;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 #ffffff, inset 1 1 #000000, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
 }
 
 /************************
@@ -1142,7 +1148,7 @@ XfdesktopIconView.view:active {
   padding: 2px;
   -XfwmTabwinWidget-icon-size: 32px;
   -XfwmTabwinWidget-preview-size: 32px;
-  box-shadow: inset -2 -2 #938e84, inset 2 2 #ffffff, inset 1 1 #000000, inset -1 -1 #000000;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
 }
 #xfwm-tabwin button {
 	background-color: @default_bg_normal;
@@ -1170,7 +1176,7 @@ XfdesktopIconView.view:active {
 	color: @colored_fg_prelight;
 }
 /*******************************
- * XFCE4 Window Manager (XFWM) *
+ * XFCE4 window manager (XFWM) *
  *******************************/
 
 /***********
@@ -1198,7 +1204,7 @@ XfdesktopIconView.view:active {
 }  
 .lightdm-gtk-greeter #login_window #user_image_border {
 	padding: 2px;
-	box-shadow: inset -2 -2 #938e84, inset 2 2 @default_bg_normal, inset 1 1 #ffffff, inset -1 -1 #000000;
+	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 }
 
 /***************
