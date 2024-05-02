@@ -839,7 +839,7 @@ switch slider {
 /************
  * treeview *
  ************/
-.view {
+treeview.view {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
 }
