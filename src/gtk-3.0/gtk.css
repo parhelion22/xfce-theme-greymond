@@ -181,7 +181,7 @@ button.color * {
 scrollbar{
   background-color: @default_bg_active;
   box-shadow: inset 1 1 shade(@default_bg_active, 0.7), inset -1 -1 shade(@default_bg_active, 1.3);
-  padding: 0px;
+  padding: 1px;
 }
 scrollbar button,
 scrollbar button:hover,
@@ -358,9 +358,10 @@ textview {
   box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
   padding: 4px;
 }
-treeview, .view {
+treeview, treeview.view {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
+padding: 0px;
 }
 grid {
  background-color: transparent;
@@ -697,6 +698,7 @@ buttonbox.horizontal button:last-child {
 scale trough {
   background-color: @default_bg_active;
   box-shadow: inset 1 1 shade(@default_bg_active, 0.7), inset -1 -1 shade(@default_bg_active, 1.3);
+
 }
 scale trough:focus {
 	outline-color: default_fg_normal;
@@ -705,12 +707,11 @@ scale trough:focus {
   outline-width: 1px;
 }
 scale {
-	margin: 1px;
+	padding: 2px;
 }
 scale slider {
 	background: @default_bg_normal no-repeat center;
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
-  margin: 1px;
 }
 scale slider:hover {
 	background-color: @default_bg_prelight;
@@ -720,10 +721,10 @@ scale trough:disabled {
 	background-color: @default_bg_normal;
 }
 scale.horizontal trough {
-	padding: 0 15px;
+	padding: 1px 16px;
 }
 scale.vertical trough {
-	padding: 15px 0;
+	padding: 16px 1px;
 }
 scale.horizontal slider {
 	background-image: url("assets/scale-slider-horizontal.png");
