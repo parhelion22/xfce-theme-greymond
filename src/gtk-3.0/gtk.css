@@ -375,6 +375,10 @@ grid > toolbar {
   box-shadow: none;
 }
 
+#monoborder {
+background-color: #0f0;
+}
+
 /***************
  * spin button *
  ***************/
