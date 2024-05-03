@@ -83,6 +83,13 @@
 }
 
 /*********
+ * grid *
+ *********/
+grid {
+ background-color: transparent;
+}
+
+/*********
  * label *
  *********/
 label:disabled {
@@ -837,7 +844,7 @@ switch slider {
 /************
  * treeview *
  ************/
-treeview.view {
+.view {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
 }
