@@ -363,7 +363,7 @@ treeview, treeview.view {
 	color: @default_text_normal;
 padding: 0px;
 }
-grid {
+viewport > grid {
  background-color: transparent;
 }
 box > scrolledwindow {
