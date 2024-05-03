@@ -352,7 +352,28 @@ entry:disabled {
 /**********
  * views  *
  **********/
-
+textview {
+	background-color: @default_base_normal;
+	color: @default_text_normal;
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  padding: 4px;
+}
+treeview, treeview.view {
+	background-color: @default_base_normal;
+	color: @default_text_normal;
+  padding: 0px;
+}
+grid {
+ background-color: transparent;
+}
+box > scrolledwindow {
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  padding: 2px;
+}
+/* needed for LibreOffice combo boxes */
+grid > toolbar {
+  box-shadow: none;
+}
 
 /***************
  * spin button *
