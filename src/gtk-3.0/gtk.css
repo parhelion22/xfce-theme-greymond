@@ -361,7 +361,7 @@ textview {
 treeview, treeview.view {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-padding: 0px;
+  padding: 0px;
 }
 viewport > grid {
  background-color: transparent;
