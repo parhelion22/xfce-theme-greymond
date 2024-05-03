@@ -82,12 +82,6 @@
 	color: @default_fg_selected;
 }
 
-/*********
- * grid *
- *********/
-grid {
- background-color: transparent;
-}
 
 /*********
  * label *
@@ -187,7 +181,7 @@ button.color * {
 scrollbar{
   background-color: @default_bg_active;
   box-shadow: inset 1 1 shade(@default_bg_active, 0.7), inset -1 -1 shade(@default_bg_active, 1.3);
-  padding: 1px;
+  padding: 0px;
 }
 scrollbar button,
 scrollbar button:hover,
@@ -355,14 +349,25 @@ entry:disabled {
   -gtk-icon-effect: dim;
 }
 
-/****************
- * text fields  *
- ****************/
+/**********
+ * views  *
+ **********/
 textview {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
   box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
   padding: 4px;
+}
+treeview, .view {
+	background-color: @default_base_normal;
+	color: @default_text_normal;
+}
+grid {
+ background-color: transparent;
+}
+box > scrolledwindow {
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  padding: 2px;
 }
 
 /***************
@@ -587,6 +592,10 @@ popover.background modelbutton:hover {
 }
 popover .flat {
 	padding: 5px;
+}
+/* needed for LibreOffice combo boxes */
+grid > toolbar {
+  box-shadow: none;
 }
 
 /***********
@@ -839,14 +848,6 @@ switch:checked:disabled {
 }
 switch slider {
 	background: none;
-}
-
-/************
- * treeview *
- ************/
-.view {
-	background-color: @default_base_normal;
-	color: @default_text_normal;
 }
 
 /************
