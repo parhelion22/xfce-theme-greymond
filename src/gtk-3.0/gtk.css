@@ -630,6 +630,9 @@ toolbar separator {
 	margin: 6px;
 	padding: 1px;
 }
+#e-attachment-bar {
+  border: none;
+}
 
 /*************
  * statusbar *
