@@ -118,13 +118,15 @@ selection:focus,
  ***********/
 button, .button {
 	background: @default_bg_normal;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  /*box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);*/
+	border-image: url("assets/button.png") 2 / 2px stretch;
 	padding: 5px;
 }
-button:hover, .button:hover, button.link:hover  {
+button:hover, .button:hover, button.link:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
   box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
+  border-image: none;
 }
 button:active, .button:active,
 button:active:hover, .button:active:hover,
@@ -134,11 +136,13 @@ stackswitcher button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
   box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
+  border-image: none;
 }
 button.toggle:checked:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
   box-shadow: inset -2 -2 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 1.3), inset 1 1 shade(@default_bg_prelight, 0.7);
+  border-image: none;
 }
 button:focus, .button:focus {
 	outline-color: default_fg_normal;
@@ -1123,12 +1127,15 @@ spinner:checked {
  ***************/
 .xfce4-panel.background button {
 	box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3 3 shade(@default_bg_normal, 1.3), inset -3 -3 shade(@default_bg_normal, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  border-image: none;
 }
 .xfce4-panel.background button:hover {
   box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3 3 shade(@default_bg_prelight, 1.3), inset -3 -3 shade(@default_bg_prelight, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  border-image: none;
 }
 .xfce4-panel.background button:active, .xfce4-panel.background button:checked {
   box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_normal, 0), inset 3 3 shade(@default_bg_normal, 0.7), inset -3 -3 shade(@default_bg_normal, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  border-image: none;
 }
 
 /*****************
