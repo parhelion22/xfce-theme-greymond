@@ -368,7 +368,7 @@ entry:disabled {
 textview {
 	background-color: @default_base_normal;
   color: @default_text_normal;
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  /*box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);*/
   padding: 4px;
 }
 treeview, treeview.view {
@@ -379,7 +379,7 @@ treeview, treeview.view {
 grid {
   background-color: transparent;
 }
-/*box > scrolledwindow {
+/*scrolledwindow {
   box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
   padding: 2px;
 }*/
@@ -389,9 +389,10 @@ grid > toolbar {
   border-image: none;
 }
 /* required for LibreOffice Calc formula field */
-/*#monoborder {
-  background-color: #0f0;
-}*/
+#monoborder {
+  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  padding: 1px;
+}
 box, toolbar,  widget {
   border-width: 0px;
 }
