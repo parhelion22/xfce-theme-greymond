@@ -90,6 +90,14 @@ label:disabled {
 	color: @default_fg_insensitive;
 	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3);
 }
+button:hover label {
+	background-color: @default_bg_prelight;
+	color: @default_fg_prelight;
+}
+button:active label {
+	background-color: @default_bg_active;
+	color: @default_fg_active;
+}
 
 /*************
  * selection *
