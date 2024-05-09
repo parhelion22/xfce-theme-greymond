@@ -437,8 +437,8 @@ menubar decoration,
 }
 menu {
 	background: @default_bg_normal;
-	padding: 2px;
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
+	padding: 2px;
 }
 menubar > menuitem {
 	margin: 1px;
@@ -609,15 +609,22 @@ headerbar.titlebar button.titlebutton.minimize {
 /************
  * popovers *
  ************/
+popover > stack > box,
+popover > box {
+	margin: -10px;
+}
+
 popover.background {
 	background: @default_bg_normal;
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
-	padding: 2px;
+  box-shadow: inset -1 -1 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3);
+	padding: 1px;
+  border: 1px solid shade(@default_bg_normal, 0);
 }
 popover.background modelbutton:hover {
 	background: @colored_bg_prelight;
   color:  @colored_fg_prelight;
 }
+
 popover .flat {
 	padding: 5px;
 }
