@@ -596,8 +596,6 @@ headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
 headerbar.titlebar button.titlebutton.minimize {
 	-gtk-icon-style: regular;
-  background-color: transparent;
-  box-shadow: none;
 }
 
 /****************************
