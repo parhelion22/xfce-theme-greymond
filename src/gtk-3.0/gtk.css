@@ -121,6 +121,9 @@ button {
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 5px;
 }
+headerbar button:not(:hover):not(:checked) {
+  box-shadow: none;
+}
 /* border-image requiered for Evolution column headers */
 .button {
 	background: @default_bg_normal;
@@ -131,10 +134,11 @@ button {
 button:hover, .button:hover, button.link:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight,app inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
+  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
   border-image: none;
 }
 button:active, .button:active,
+button:checked,
 button:active:hover, .button:active:hover,
 button.toggle:checked,
 button.toggle:active:hover,
@@ -583,14 +587,17 @@ expander arrow:checked {
  * CSD header and window border *
  ********************************/
 headerbar {
-  background-color: @default_bg_normal;
-	padding: 7px;
+	background-color: @default_bg_normal;
+  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	padding: 2px;
 }
 
 headerbar.titlebar button.titlebutton.close,
 headerbar.titlebar button.titlebutton.maximize,
 headerbar.titlebar button.titlebutton.minimize {
 	-gtk-icon-style: regular;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 /****************************
