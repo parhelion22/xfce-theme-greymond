@@ -39,3 +39,10 @@
 @define-color warning_bg_normal		      #FCAF3E;
 @define-color question_bg_normal	      #8CB0D7;
 @define-color error_bg_normal			      #F03838;
+
+/* legacy */
+@define-color theme_fg_color @default_fg_normal;
+@define-color theme_text_color @default_text_normal;
+@define-color theme_bg_color @default_bg_normal;
+@define-color theme_base_color @default_base_normal;
+@define-color theme_selected_bg_color @default_bg_active;
