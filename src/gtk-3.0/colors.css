@@ -5,9 +5,9 @@
 @define-color default_fg_active 		    #000000;
 @define-color default_fg_insensitive 	  shade(@default_bg_normal, 0.7); /* XFWM inactive title */
 
-@define-color default_bg_normal 		    #ccc7b8; /* #CCC9C2 */
+@define-color default_bg_normal 		    #CCC9C2; /* #CCC9C2 */
 @define-color default_bg_prelight 		  shade(@default_bg_normal, 1.1);
-@define-color default_bg_selected 		  #008080; /* #4B6983 */
+@define-color default_bg_selected 		  #4B6983; /* #4B6983 */
 @define-color default_bg_active 		    shade(@default_bg_normal, 0.9);
 @define-color default_bg_insensitive 	  @default_bg_normal;
 
