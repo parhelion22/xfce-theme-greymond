@@ -1,0 +1,41 @@
+/* default */
+@define-color default_fg_normal 		    #000000;
+@define-color default_fg_prelight 		  #000000;
+@define-color default_fg_selected 		  #FFFFFF;
+@define-color default_fg_active 		    #000000;
+@define-color default_fg_insensitive 	  shade(@default_bg_normal, 0.7); /* XFWM inactive title */
+
+@define-color default_bg_normal 		    #ccc7b8; /* #CCC9C2 */
+@define-color default_bg_prelight 		  shade(@default_bg_normal, 1.1);
+@define-color default_bg_selected 		  #008080; /* #4B6983 */
+@define-color default_bg_active 		    shade(@default_bg_normal, 0.9);
+@define-color default_bg_insensitive 	  @default_bg_normal;
+
+@define-color default_base_normal 		  #FFFFFF;
+@define-color default_base_prelight 	  #FFFFFF;
+@define-color default_base_selected 	  @default_bg_selected; 
+@define-color default_base_active		    shade(@default_bg_normal, 0.7);
+@define-color default_base_insensitive  shade(@default_bg_normal, 1.1);
+
+@define-color default_text_normal 		  #000000;
+@define-color default_text_prelight 	  #000000;
+@define-color default_text_selected 	  #FFFFFF;
+@define-color default_text_active 		  #FFFFFF;
+@define-color default_text_insensitive	shade(@default_bg_normal, 0.7);
+
+/* colored */
+@define-color colored_fg_prelight 		  #FFFFFF;
+
+@define-color colored_bg_normal 		    shade(@default_bg_normal, 0.9);
+@define-color colored_bg_prelight 		  @default_bg_selected;
+
+/*@define-color colored_text_prelight     #FFFFFF;*/
+
+/* link */
+@define-color link_fg_normal			      #000080;
+
+/* notification */
+@define-color info_bg_normal 			      #FFFFBF;
+@define-color warning_bg_normal		      #FCAF3E;
+@define-color question_bg_normal	      #8CB0D7;
+@define-color error_bg_normal			      #F03838;
