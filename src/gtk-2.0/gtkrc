@@ -4,25 +4,25 @@ style "Default"
 	fg[PRELIGHT]      	= "#000000" 
 	fg[SELECTED]      	= "#FFFFFF"
 	fg[ACTIVE]        	= "#000000" 
-	fg[INSENSITIVE]   	= "#8F8D88" #0.7 bg[NORMAL]
+	fg[INSENSITIVE]   	= "#968F81" #= 0.7 * bg[NORMAL]
 
 	bg[NORMAL]			    = "#CCC9C2" 
-	bg[PRELIGHT]      	= "#E0DDD5" #1.1 bg[NORMAL]
+	bg[PRELIGHT]      	= "#DEDCD7" #= 1.1 * bg[NORMAL]
 	bg[SELECTED] 	  	  = "#4B6983" 
-	bg[ACTIVE]  	  	  = "#B8B5AF" #0.9 bg[NORMAL]
-	bg[INSENSITIVE]   	= "#CCC9C2" #bg[NORMAL]
+	bg[ACTIVE]  	  	  = "#BAB5AC" #= 0.9 * bg[NORMAL]
+	bg[INSENSITIVE]   	= "#CCC9C2" #= bg[NORMAL]
 
-	base[NORMAL]      	= "#FFFFFF" 
+	base[NORMAL]      	= "#FFFFFF" #= 1.3 * bg[NORMAL]
 	base[PRELIGHT]    	= "#FFFFFF"
-	base[SELECTED]    	= "#4B6983" #bg[SELECTED]
-	base[ACTIVE]     	  = "#8F8D88" #0.7 bg[NORMAL]
-	base[INSENSITIVE]  	= "#E0DDD5" #1.1 bg[NORMAL]
+	base[SELECTED]    	= "#4B6983" #= bg[SELECTED]
+	base[ACTIVE]     	  = "#968F81" #= 0.7 * bg[NORMAL]
+	base[INSENSITIVE]  	= "#DEDCD7" #= 1.1 * bg[NORMAL]
 
 	text[NORMAL]		    = "#000000" 
 	text[PRELIGHT]		  = "#000000"
 	text[SELECTED]		  = "#FFFFFF" 
 	text[ACTIVE]		    = "#FFFFFF" 
-	text[INSENSITIVE]	  = "#8F8D88" #0.7 bg[NORMAL]
+	text[INSENSITIVE]	  = "#968F81" #= 0.7 * bg[NORMAL]
 
 	GtkWidget::link-color				        = "#000080"
 	GtkWidget::visited-link-color	      = "#000080"
@@ -38,18 +38,18 @@ style "Colored"
 {
 	fg[PRELIGHT]      	= "#FFFFFF"
 	
-	bg[NORMAL] 			    = "#B8B5AF" #0.9 bg[NORMAL]
-	bg[PRELIGHT]      	= "#4B6983" #bg[SELECTED]
+	bg[NORMAL] 			    = "#BAB5AC" #= 0.9 * bg[NORMAL]
+	bg[PRELIGHT]      	= "#4B6983" #= bg[SELECTED]
 
-	text[PRELIGHT]    	= "#FFFFFF"
+#	text[PRELIGHT]    	= "#FFFFFF"
 }
 
 style "MenuItem" #required for QGtkStyle active menu item
 {
 	fg[PRELIGHT]      	= "#FFFFFF"
 	
-	bg[NORMAL] 			    = "#B8B5AF" #0.9 bg[NORMAL]
-	bg[PRELIGHT]      	= "#4B6983" #bg[SELECTED]
+	bg[NORMAL] 			    = "#BAB5AC" #= 0.9 * bg[NORMAL]
+	bg[PRELIGHT]      	= "#4B6983" #= bg[SELECTED]
 
 	text[PRELIGHT]    	= "#FFFFFF"
 
