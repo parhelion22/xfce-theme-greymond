@@ -5,7 +5,7 @@ static char * title_middle_inactive_xpm[] = {
 "+	c #FFFFFF s inactive_hilight_2",
 "@	c #CCC9C2 s inactive_color_2",
 "#	c #938E84 s inactive_shadow_2",
-"$	c #FF00FF s inactive_color_1",
+"$	c #928e84 s inactive_color_1",
 "@@@@@",
 "+++++",
 "@@@@@",
