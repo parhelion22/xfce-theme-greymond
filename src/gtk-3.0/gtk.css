@@ -18,7 +18,7 @@
 	-gtk-icon-effect: dim;
 }*/
 .flat:not(:hover):not(:checked) {
-	border: 0;
+	border: none;
   box-shadow: none;
 }
 .gtkstyle-fallback {
@@ -49,13 +49,13 @@ label:disabled {
 	color: @default_fg_insensitive;
 	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3);
 }
-/* required for print dialog buttons, but in conflict with XFCE taskbar */
+/* required for print dialog buttons, but in conflict with XFCE taskbar *//*
 button:hover:not(:active) label {
   background-color: @default_bg_prelight;
-}
-button:active label {
+}*/
+/*button:active label {
   background-color: @default_bg_active;
-}
+}*/
 
 /*************
  * selection *
@@ -82,20 +82,17 @@ selection:focus,
 /***********
  * buttons *
  ***********/
-
-button {
+button,
+.button {
 	background: @default_bg_normal;
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 5px;
 }
-headerbar button:not(:hover):not(:checked) {
-  box-shadow: none;
-}
 /* border-image requiered for Evolution column headers */
 .button {
 	background: @default_bg_normal;
-  /*box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);*/
 	border-image: url("assets/button.png") 2 / 2px stretch;
+  box-shadow: none;
 	padding: 5px;
 }
 button:hover, .button:hover, button.link:hover {
@@ -104,29 +101,62 @@ button:hover, .button:hover, button.link:hover {
   box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
   border-image: none;
 }
-button:active, .button:active,
+button:active,
+.button:active,
 button:checked,
-button:active:hover, .button:active:hover,
 button.toggle:checked,
-button.toggle:active:hover,
-stackswitcher button:checked {	
+button.toggle:checked:hover:active,
+stackswitcher button:checked,
+viewswitcher button:checked {	
 	background-color: @default_bg_active;
 	color: @default_fg_active;
   box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
   border-image: none;
 }
-button.toggle:checked:hover {
+button.toggle:checked:hover,
+stackswitcher button:checked:hover,
+viewswitcher button:checked:hover {	
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
   box-shadow: inset -2 -2 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 1.3), inset 1 1 shade(@default_bg_prelight, 0.7);
   border-image: none;
 }
-button:focus, .button:focus {
+/*
+checkbutton:hover, radiobutton:hover {
+	background-color: @default_bg_prelight;
+	color: @default_fg_prelight;
+}
+checkbutton:disabled, radiobutton:disabled {
+	color: @default_fg_insensitive;
+	text-shadow: 1px 1px white;
+}
+checkbutton label, radiobutton label {
+	padding-right: .5em;
+}
+*/
+/*
+button:active:hover, .button:active:hover,
+button.toggle:checked:hover,
+button.toggle:active:hover,
+stackswitcher button:checked:hover,
+viewswitcher button:checked:hover {	
+	background-color: @default_bg_prelight;
+	color: @default_fg_prelight;
+  box-shadow: inset -2 -2 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 1.3), inset 1 1 shade(@default_bg_prelight, 0.7);
+  border-image: none;
+}*/
+
+button:focus,
+.button:focus,
+checkbutton:focus,
+radiobutton:focus {
 	outline-color: default_fg_normal;
   outline-style: dotted;
   outline-offset: -4px;
   outline-width: 1px;
 }
+
+/*
 dialog button:focus, messagedialog button:focus, printdialog button:focus {
   box-shadow: inset -3 -3 shade(@default_bg_prelight, 0.7), inset 3 3 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 1.3), inset -2 -2 shade(@default_bg_prelight, 0), inset 1 1 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 0);
 	outline-color: default_fg_normal;
@@ -134,18 +164,9 @@ dialog button:focus, messagedialog button:focus, printdialog button:focus {
   outline-offset: -4px;
   outline-width: 1px;
 }
-button:active, .button:active,
-button:checked,
-button:active:hover, .button:active:hover,
-button.toggle:checked,
-button.toggle:active:hover,
-stackswitcher button:checked {	
-	background-color: @default_bg_active;
-	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
-  border-image: none;
-}
-button:disabled, .button:disabled {
+*/
+button:disabled,
+.button:disabled {
 	background-color: @default_bg_insensitive;
 	color: @default_fg_insensitive;
 	text-shadow: 1px 1px white;
@@ -160,6 +181,7 @@ button.link:hover {
   box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
 }
 button.link:active {
+  background-color: @default_bg_active;
 	color: @link_fg_normal;
   box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
 }
@@ -251,22 +273,16 @@ check {
 	min-height: 16px;
 	min-width: 16px;
 }
-checkbutton:focus, radiobutton:focus {
-	outline-color: default_fg_normal;
-  outline-style: dotted;
-  outline-offset: -3px;
-  outline-width: 1px;
+checkbutton label {
+	padding-right: .5em;
 }
-checkbutton:hover, radiobutton:hover {
+checkbutton:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
 }
-checkbutton:disabled, radiobutton:disabled {
+checkbutton:disabled {
 	color: @default_fg_insensitive;
 	text-shadow: 1px 1px white;
-}
-checkbutton label, radiobutton label {
-	padding-right: .5em;
 }
 check:disabled, radio:disabled {
 	border-color: @default_base_insensitive;
@@ -308,6 +324,17 @@ radio {
 	margin: .3em .4em .3em .3em;
 	min-height: 16px;
 	min-width: 16px;
+}
+radiobutton label {
+	padding-right: .5em;
+}
+radiobutton:hover {
+	background-color: @default_bg_prelight;
+	color: @default_fg_prelight;
+}
+radiobutton:disabled {
+	color: @default_fg_insensitive;
+	text-shadow: 1px 1px white;
 }
 radio {
 	-gtk-icon-source: url("assets/radio-unchecked.png");
@@ -409,7 +436,7 @@ combobox arrow:insensitive {
 	-gtk-icon-effect: dim;
 }
 combobox button:first-child arrow {
-	border-image: url("assets/combobox-arrow-separator.png") 2 / 2px stretch;
+  box-shadow: inset 2 0 shade(@default_bg_normal, 1.3), inset 1 0 shade(@default_bg_normal, 0.7);
 	padding-left: .5em;
 }
 
@@ -633,6 +660,7 @@ toolbar {
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 2px;
 }
+
 toolbar separator {
 	box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 	margin: 6px;
@@ -763,13 +791,15 @@ scale.vertical slider {
 	min-width: 14px;
 }
 scale.horizontal mark indicator {
-	background-color: shade(@default_bg_normal, 0.56);
+  color: transparent;
+  box-shadow: inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 	min-height: 8px;
-	min-width: 1px;
+	min-width: 2px;
 }
 scale.vertical mark indicator {
-	background-color: shade(@default_bg_normal, 0.56);
-	min-height: 1px;
+  color: transparent;
+  box-shadow: inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+	min-height: 2px;
 	min-width: 8px;
 }
 
@@ -785,11 +815,13 @@ scale.color slider {
 }
 scale.color.horizontal slider {
 	background-image: url("assets/color-scale-slider-horizontal.png");
+  box-shadow: none;
 	min-height: 14px;
 	min-width: 16px;
 }
 scale.color.vertical slider {
 	background-image: url("assets/color-scale-slider-vertical.png");
+  box-shadow: none;
 	min-height: 16px;
 	min-width: 14px;
 }
@@ -955,7 +987,6 @@ calendar.highlight {
 	padding-left: 0;
 	padding-right: 0;
 }
-
 .path-bar button.text-button.image-button label:last-child, .path-bar button label:last-child {
 	padding-right: 4px;
 }
@@ -975,24 +1006,24 @@ calendar.highlight {
  * file chooser *
  ****************/
 dialog filechooser stack {
-	background: @default_bg_normal; }
-
+	background: @default_bg_normal;
+}
 dialog filechooser placessidebar row {
 	padding: 2px;
-    margin: 0px; }
-
+    margin: 0px;
+}
 dialog filechooser placessidebar row image.sidebar-icon:dir(ltr) {
-    padding-right: 4px; }
-
+    padding-right: 4px;
+}
 dialog filechooser placessidebar row image.sidebar-icon:dir(rtl) {
-    padding-left: 4px; }
-
+    padding-left: 4px;
+}
 dialog filechooser placessidebar row label.sidebar-label:dir(ltr) {
-    padding-right: 4px; }
-
+    padding-right: 4px;
+}
 dialog filechooser placessidebar row label.sidebar-label:dir(rtl) {
-    padding-left: 4px; }
-
+    padding-left: 4px;
+}
 dialog filechooser actionbar {
 	margin-top: 4px;
 	padding: 6px;
@@ -1025,16 +1056,6 @@ colorchooser .popover {
 /****************
  * print dialog *
  ****************/
-printdialog > box > box {
-	padding: 0px;
-}
-printdialog box {
-	background: @default_bg_normal;
-}
-printdialog notebook stack {
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
-	padding: 2px;
-}
 printdialog paper {
 	background-color: @default_base_normal;
 	border: solid 1px @default_text_normal;
@@ -1149,7 +1170,8 @@ spinner:checked {
 .xfce4-panel.background button:hover label {
   background-color: transparent;
 }
-.xfce4-panel.background button:active, .xfce4-panel.background button:checked {
+.xfce4-panel.background button:active,
+.xfce4-panel.background button:checked {
   box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_normal, 0), inset 3 3 shade(@default_bg_normal, 0.7), inset -3 -3 shade(@default_bg_normal, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
   border-image: none;
 }
@@ -1188,31 +1210,7 @@ XfdesktopIconView.view:active {
   -XfwmTabwinWidget-preview-size: 32px;
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
 }
-#xfwm-tabwin button {
-	background-color: @default_bg_normal;
-	color: @default_fg_normal;
-  box-shadow: none;
-}
-#xfwm-tabwin button:hover {
-	background-color: @colored_bg_prelight;
-	color: @colored_fg_prelight;
-}
-#xfwm-tabwin button:active {
-	background-color: @colored_bg_prelight;
-	color: @colored_fg_prelight;
-}
-#xfwm-tabwin button:active:hover {
-	background-color: @colored_bg_prelight;
-	color: @colored_fg_prelight;
-}
-#xfwm-tabwin button:checked {
-	background-color: @colored_bg_prelight;
-	color: @colored_fg_prelight;
-}
-#xfwm-tabwin button:checked:hover {
-	background-color: @colored_bg_prelight;
-	color: @colored_fg_prelight;
-}
+
 /*******************************
  * XFCE4 window manager (XFWM) *
  *******************************/
