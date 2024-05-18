@@ -89,7 +89,7 @@ selection:focus,
  ***********/
 button {
 	background: @default_bg_normal;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 5px;
 }
 /* border-image requiered for Evolution column headers */
@@ -104,7 +104,7 @@ button:hover,
 button.link:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_prelight, 0.7), inset 2px 2px @default_bg_prelight, inset 1px 1px shade(@default_bg_prelight, 1.3), inset -1px -1px shade(@default_bg_prelight, 0);
   border-image: none;
 }
 button:active,
@@ -116,7 +116,7 @@ stackswitcher button:checked,
 viewswitcher button:checked {	
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
+  box-shadow: inset -2px -2px @default_bg_active, inset 2px 2px shade(@default_bg_active, 0), inset -1px -1px shade(@default_bg_active, 1.3), inset 1px 1px shade(@default_bg_active, 0.7);
   border-image: none;
 }
 button.toggle:checked:hover,
@@ -124,7 +124,7 @@ stackswitcher button:checked:hover,
 viewswitcher button:checked:hover {	
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -2 -2 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 1.3), inset 1 1 shade(@default_bg_prelight, 0.7);
+  box-shadow: inset -2px -2px @default_bg_prelight, inset 2px 2px shade(@default_bg_prelight, 0), inset -1px -1px shade(@default_bg_prelight, 1.3), inset 1px 1px shade(@default_bg_prelight, 0.7);
   border-image: none;
 }
 /*
@@ -148,7 +148,7 @@ stackswitcher button:checked:hover,
 viewswitcher button:checked:hover {	
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -2 -2 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 1.3), inset 1 1 shade(@default_bg_prelight, 0.7);
+  box-shadow: inset -2px -2px @default_bg_prelight, inset 2px 2px shade(@default_bg_prelight, 0), inset -1px -1px shade(@default_bg_prelight, 1.3), inset 1px 1px shade(@default_bg_prelight, 0.7);
   border-image: none;
 }*/
 
@@ -164,7 +164,7 @@ radiobutton:focus {
 
 /*
 dialog button:focus, messagedialog button:focus, printdialog button:focus {
-  box-shadow: inset -3 -3 shade(@default_bg_prelight, 0.7), inset 3 3 @default_bg_prelight, inset 2 2 shade(@default_bg_prelight, 1.3), inset -2 -2 shade(@default_bg_prelight, 0), inset 1 1 shade(@default_bg_prelight, 0), inset -1 -1 shade(@default_bg_prelight, 0);
+  box-shadow: inset -3px -3px shade(@default_bg_prelight, 0.7), inset 3px 3px @default_bg_prelight, inset 2px 2px shade(@default_bg_prelight, 1.3), inset -2px -2px shade(@default_bg_prelight, 0), inset 1px 1px shade(@default_bg_prelight, 0), inset -1px -1px shade(@default_bg_prelight, 0);
 	outline-color: default_fg_normal;
   outline-style: dotted;
   outline-offset: -4px;
@@ -184,18 +184,18 @@ button.link {
 }
 button.link:hover {
 	color: @link_fg_normal;
-  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_prelight, 0.7), inset 2px 2px @default_bg_prelight, inset 1px 1px shade(@default_bg_prelight, 1.3), inset -1px -1px shade(@default_bg_prelight, 0);
 }
 button.link:active {
   background-color: @default_bg_active;
 	color: @link_fg_normal;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
+  box-shadow: inset -2px -2px @default_bg_active, inset 2px 2px shade(@default_bg_active, 0), inset -1px -1px shade(@default_bg_active, 1.3), inset 1px 1px shade(@default_bg_active, 0.7);
 }
 button.link > label {
 	text-decoration-line: underline;
 }
 button.color * {
-	box-shadow: inset 2 2 shade(@default_bg_normal, 0.7), inset -2 -2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0.7);
+	box-shadow: inset 2px 2px shade(@default_bg_normal, 0.7), inset -2px -2px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0.7);
 	margin: 1px;
 	margin-left: 15px;
 	margin-right: 15px;
@@ -207,7 +207,7 @@ button.color * {
  **************/
 scrollbar{
   background-color: @default_bg_active;
-  box-shadow: inset 1 1 shade(@default_bg_active, 0.7), inset -1 -1 shade(@default_bg_active, 1.3);
+  box-shadow: inset 1px 1px shade(@default_bg_active, 0.7), inset -1px -1px shade(@default_bg_active, 1.3);
   padding: 1px;
 }
 scrollbar button,
@@ -242,11 +242,11 @@ scrollbar button:disabled {
 }
 scrollbar slider {
 	background: @default_bg_normal;
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 }
 scrollbar slider:hover {
 	background-color: @default_bg_prelight;
-  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_prelight, 0.7), inset 2px 2px @default_bg_prelight, inset 1px 1px shade(@default_bg_prelight, 1.3), inset -1px -1px shade(@default_bg_prelight, 0);
 }
 scrollbar.vertical slider {
 	min-height: 10px;
@@ -368,7 +368,7 @@ radio:checked:disabled {
 entry {	
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
   padding: 4px;
 }
 entry:checked {
@@ -384,14 +384,14 @@ entry:disabled {
 /**********
  * views  *
  **********/
-.view {
+/*.view {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-}
+}*/
 textview {
 	background-color: @default_base_normal;
   color: @default_text_normal;
-  /*box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);*/
+  /*box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);*/
   padding: 4px;
 }
 treeview, treeview.view {
@@ -403,7 +403,7 @@ grid {
   background-color: transparent;
 }
 /*scrolledwindow {
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
   padding: 2px;
 }*/
 /* required for LibreOffice combo boxes */
@@ -413,7 +413,7 @@ grid > toolbar {
 }
 /* required for LibreOffice Calc formula field */
 #monoborder {
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
   padding: 1px;
 }
 /*box, toolbar,  widget {
@@ -451,7 +451,7 @@ combobox button:first-child arrow {
  *********/
 menubar {
 	min-height: 24px;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 }
 menubar decoration,
 .popup decoration {
@@ -459,7 +459,7 @@ menubar decoration,
 }
 menu {
 	background-color: @default_bg_normal;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 menubar > menuitem {
@@ -479,7 +479,7 @@ menuitem:hover {
 	color: @colored_fg_prelight;
 }
 menu separator {
-  box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+  box-shadow: inset 2px 2px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
 	margin: .2em .4em;
 	padding: 1px;
 }
@@ -504,7 +504,7 @@ menuitem > arrow {
 }*/
 notebook.frame > stack, notebook > stack {
   background-color: @default_bg_normal;
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
   padding: 2px;
 }
 notebook header.top tabs {
@@ -610,7 +610,7 @@ expander arrow:checked {
  ********************************/
 headerbar {
 	background-color: @default_bg_normal;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 
@@ -626,7 +626,7 @@ headerbar.titlebar button.titlebutton.minimize {
 .app-notification {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 7px;
 }
 .app-notification border {
@@ -643,7 +643,7 @@ popover > box {
 
 popover.background {
 	background: @default_bg_normal;
-  box-shadow: inset -1 -1 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3);
+  box-shadow: inset -1px -1px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3);
 	padding: 1px;
   border: 1px solid shade(@default_bg_normal, 0);
 }
@@ -661,18 +661,18 @@ popover .flat {
  ***********/
 toolbar {
 	background-color: @default_bg_normal;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 /* required for evolution toolbars */
 .primary-toolbar {
 	border-image: url("assets/checkbox-unchecked.png") 1 / 1px stretch;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 
 toolbar separator {
-	box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+	box-shadow: inset 2px 2px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
 	margin: 6px;
 	padding: 1px;
 }
@@ -681,7 +681,7 @@ toolbar separator {
  * statusbar *
  *************/
 statusbar frame {
-	box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+	box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 6px;
@@ -709,11 +709,11 @@ list row:hover {
  * separators *
  **************/
 separator.horizontal {
-  box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+  box-shadow: inset 2px 2px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
 	padding: 1px;
 }
 separator.vertical {
-	box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+	box-shadow: inset 2px 2px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
 	padding: 1px;
 }
 
@@ -737,7 +737,7 @@ paned.vertical > separator {
  * frames *
  **********/
 frame > border {
-  box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+  box-shadow: inset 2px 2px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
   padding: 4px;
 }
 frame > label {
@@ -752,7 +752,7 @@ preferencesgroup > box > label:first-child {
   font-weight: bold;
 }
 preferencesgroup row box {
-/*	box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+/*	box-shadow: inset 2px 2px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
   padding: 5px; 
   margin: 5px;*/
 }
@@ -784,7 +784,7 @@ buttonbox.horizontal button:last-child {
  *********/
 scale trough {
   background-color: @default_bg_active;
-  box-shadow: inset 1 1 shade(@default_bg_active, 0.7), inset -1 -1 shade(@default_bg_active, 1.3);
+  box-shadow: inset 1px 1px shade(@default_bg_active, 0.7), inset -1px -1px shade(@default_bg_active, 1.3);
 
 }
 scale trough:focus {
@@ -798,11 +798,11 @@ scale {
 }
 scale slider {
 	background: @default_bg_normal no-repeat center;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 }
 scale slider:hover {
 	background-color: @default_bg_prelight;
-  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_prelight, 0.7), inset 2px 2px @default_bg_prelight, inset 1px 1px shade(@default_bg_prelight, 1.3), inset -1px -1px shade(@default_bg_prelight, 0);
 }
 scale trough:disabled {
 	background-color: @default_bg_normal;
@@ -825,13 +825,13 @@ scale.vertical slider {
 }
 scale.horizontal mark indicator {
   color: transparent;
-  box-shadow: inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+  box-shadow: inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
 	min-height: 8px;
 	min-width: 2px;
 }
 scale.vertical mark indicator {
   color: transparent;
-  box-shadow: inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  box-shadow: inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
 	min-height: 2px;
 	min-width: 8px;
 }
@@ -864,7 +864,7 @@ scale.color.vertical slider {
  ***************/
 progressbar trough {
 	background: @colored_bg_normal;
-  box-shadow: inset 1 1 shade(@colored_bg_normal, 0.7), inset -1 -1 shade(@colored_bg_normal, 1.3);
+  box-shadow: inset 1px 1px shade(@colored_bg_normal, 0.7), inset -1px -1px shade(@colored_bg_normal, 1.3);
   padding: 1px;
 }
 progressbar {
@@ -873,7 +873,7 @@ progressbar {
 progressbar progress {
 	background: @colored_bg_prelight;
 	color: @default_fg_normal;
-  box-shadow: inset -2 -2 shade(@colored_bg_prelight, 0.7), inset 2 2 @colored_bg_prelight, inset 1 1 shade(@colored_bg_prelight, 1.3), inset -1 -1 shade(@colored_bg_prelight, 0);
+  box-shadow: inset -2px -2px shade(@colored_bg_prelight, 0.7), inset 2px 2px @colored_bg_prelight, inset 1px 1px shade(@colored_bg_prelight, 1.3), inset -1px -1px shade(@colored_bg_prelight, 0);
 }
 progressbar.horizontal,
 progressbar.horizontal trough {
@@ -901,7 +901,7 @@ levelbar block {
 }
 levelbar block.filled {
 	background: @colored_bg_prelight;
-  box-shadow: inset -2 -2 shade(@colored_bg_prelight, 0.7), inset 2 2 @colored_bg_prelight, inset 1 1 shade(@colored_bg_prelight, 1.3), inset -1 -1 shade(@colored_bg_prelight, 0);
+  box-shadow: inset -2px -2px shade(@colored_bg_prelight, 0.7), inset 2px 2px @colored_bg_prelight, inset 1px 1px shade(@colored_bg_prelight, 1.3), inset -1px -1px shade(@colored_bg_prelight, 0);
 }
 
 /**********
@@ -964,12 +964,12 @@ calendar {
 }
 calendar.header {
 	background-color: @default_bg_normal;
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 calendar.view {
 	background-color: @default_base_normal;
-	box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+	box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
 }
 calendar:indeterminate {
 	color: @default_text_insensitive;
@@ -984,19 +984,19 @@ calendar.highlight {
  ************/
 .info {
 	background-color: @info_bg_normal;
-  box-shadow: inset -2 -2 shade(@info_bg_normal, 0.7), inset 2 2 @info_bg_normal, inset 1 1 shade(@info_bg_normal, 1.3), inset -1 -1 shade(@info_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@info_bg_normal, 0.7), inset 2px 2px @info_bg_normal, inset 1px 1px shade(@info_bg_normal, 1.3), inset -1px -1px shade(@info_bg_normal, 0);
 }
 .warning {
 	background-color: @warning_bg_normal;
-  box-shadow: inset -2 -2 shade(@warning_bg_normal, 0.7), inset 2 2 @warning_bg_normal, inset 1 1 shade(@warning_bg_normal, 1.3), inset -1 -1 shade(@warning_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@warning_bg_normal, 0.7), inset 2px 2px @warning_bg_normal, inset 1px 1px shade(@warning_bg_normal, 1.3), inset -1px -1px shade(@warning_bg_normal, 0);
 }
 .question {
 	background-color: @question_bg_normal;
-  box-shadow: inset -2 -2 shade(@question_bg_normal, 0.7), inset 2 2 @question_bg_normal, inset 1 1 shade(@question_bg_normal, 1.3), inset -1 -1 shade(@question_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@question_bg_normal, 0.7), inset 2px 2px @question_bg_normal, inset 1px 1px shade(@question_bg_normal, 1.3), inset -1px -1px shade(@question_bg_normal, 0);
 }
 .error {
 	background-color: @error_bg_normal;
-  box-shadow: inset -2 -2 shade(@error_bg_normal, 0.7), inset 2 2 @error_bg_normal, inset 1 1 shade(@error_bg_normal, 1.3), inset -1 -1 shade(@error_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@error_bg_normal, 0.7), inset 2px 2px @error_bg_normal, inset 1px 1px shade(@error_bg_normal, 1.3), inset -1px -1px shade(@error_bg_normal, 0);
 }
 
 /***********
@@ -1004,7 +1004,7 @@ calendar.highlight {
  ***********/
 .sidebar {
 	background-color: @default_base_normal;
-  box-shadow: inset -2 -2 @default_bg_normal, inset 2 2 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0.7);
+  box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
 	padding: 2px;
 }
 
@@ -1043,19 +1043,19 @@ dialog filechooser stack {
 }
 dialog filechooser placessidebar row {
 	padding: 2px;
-    margin: 0px;
+  margin: 0px;
 }
 dialog filechooser placessidebar row image.sidebar-icon:dir(ltr) {
-    padding-right: 4px;
+  padding-right: 4px;
 }
 dialog filechooser placessidebar row image.sidebar-icon:dir(rtl) {
-    padding-left: 4px;
+  padding-left: 4px;
 }
 dialog filechooser placessidebar row label.sidebar-label:dir(ltr) {
-    padding-right: 4px;
+  padding-right: 4px;
 }
 dialog filechooser placessidebar row label.sidebar-label:dir(rtl) {
-    padding-left: 4px;
+  padding-left: 4px;
 }
 dialog filechooser actionbar {
 	margin-top: 4px;
@@ -1066,7 +1066,7 @@ dialog filechooser actionbar {
  * color chooser *
  *****************/
 dialog colorchooser colorswatch {
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 2px;
 }
 dialog colorchooser colorswatch.dark * {
@@ -1076,14 +1076,14 @@ dialog colorchooser colorswatch.light * {
 	color: black;
 }
 dialog colorchooser #add-color-button {
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 }
 dialog colorchooser colorswatch:selected * {
 	background: transparent;
 }
 colorchooser .popover {
 	background-color: @default_bg_normal;
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 }
 
 /****************
@@ -1093,10 +1093,9 @@ printdialog paper {
 	background-color: @default_base_normal;
 	border: solid 1px @default_text_normal;
 }
-printdialog > box {
+printdialog box {
 	background-color: @default_bg_normal;
 }
-
 /*********************
  * spinner animation *
  *********************/
@@ -1130,7 +1129,7 @@ spinner:checked {
 #whiskermenu-button {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
-  box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3 3 shade(@default_bg_normal, 1.3), inset -3 -3 shade(@default_bg_normal, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3px 3px shade(@default_bg_normal, 1.3), inset -3px -3px shade(@default_bg_normal, 0), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
 }
 /*
 #whiskermenu-button image,
@@ -1145,7 +1144,7 @@ spinner:checked {
 #whiskermenu-button:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3 3 shade(@default_bg_prelight, 1.3), inset -3 -3 shade(@default_bg_prelight, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3px 3px shade(@default_bg_prelight, 1.3), inset -3px -3px shade(@default_bg_prelight, 0), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
 }
 /*
 #whiskermenu-button:active {
@@ -1156,7 +1155,7 @@ spinner:checked {
 #whiskermenu-button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3 3 shade(@default_bg_active, 0.7), inset -3 -3 shade(@default_bg_active, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3px 3px shade(@default_bg_active, 0.7), inset -3px -3px shade(@default_bg_active, 1.3), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
 }
 /*
 #whiskermenu-window {
@@ -1164,7 +1163,7 @@ spinner:checked {
 	color: @default_fg_normal;
 }
 #whiskermenu-window frame > border {
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 0);
 }
 #whiskermenu-window button {
 	background-color: @default_bg_normal;
@@ -1173,18 +1172,18 @@ spinner:checked {
 #whiskermenu-window button:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
-  box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 #000000;
+  box-shadow: inset -2px -2px shade(@default_bg_prelight, 0.7), inset 2px 2px @default_bg_prelight, inset 1px 1px shade(@default_bg_prelight, 1.3), inset -1px -1px #000000;
 }
 
 #whiskermenu-window button:active {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -2 -2 @default_bg_active, inset 2 2 shade(@default_bg_active, 0), inset -1 -1 shade(@default_bg_active, 1.3), inset 1 1 shade(@default_bg_active, 0.7);
+  box-shadow: inset -2px -2px @default_bg_active, inset 2px 2px shade(@default_bg_active, 0), inset -1px -1px shade(@default_bg_active, 1.3), inset 1px 1px shade(@default_bg_active, 0.7);
 }
 #whiskermenu-window button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
-  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3 3 shade(@default_bg_active, 0.7), inset -3 -3 shade(@default_bg_active, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3px 3px shade(@default_bg_active, 0.7), inset -3px -3px shade(@default_bg_active, 1.3), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
 }
 
 #whiskermenu-window treeview {
@@ -1207,11 +1206,11 @@ spinner:checked {
  * XFCE4 panel *
  ***************/
 .xfce4-panel.background button {
-	box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3 3 shade(@default_bg_normal, 1.3), inset -3 -3 shade(@default_bg_normal, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+	box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3px 3px shade(@default_bg_normal, 1.3), inset -3px -3px shade(@default_bg_normal, 0), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
   border-image: none;
 }
 .xfce4-panel.background button:hover {
-  box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3 3 shade(@default_bg_prelight, 1.3), inset -3 -3 shade(@default_bg_prelight, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3px 3px shade(@default_bg_prelight, 1.3), inset -3px -3px shade(@default_bg_prelight, 0), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
   border-image: none;
 }
 .xfce4-panel.background button:hover label {
@@ -1219,7 +1218,7 @@ spinner:checked {
 }
 .xfce4-panel.background button:active,
 .xfce4-panel.background button:checked {
-  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_normal, 0), inset 3 3 shade(@default_bg_normal, 0.7), inset -3 -3 shade(@default_bg_normal, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
+  box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_normal, 0), inset 3px 3px shade(@default_bg_normal, 0.7), inset -3px -3px shade(@default_bg_normal, 1.3), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
   border-image: none;
 }
 .xfce4-panel.background button:active label, .xfce4-panel.background button:checked label {
@@ -1243,7 +1242,7 @@ XfdesktopIconView.view:active {
  *******************************/
 .xfsm-logout-dialog {
 	border: 0px solid;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 0);
 }
 
 /************************
@@ -1255,7 +1254,7 @@ XfdesktopIconView.view:active {
   padding: 2px;
   -XfwmTabwinWidget-icon-size: 32px;
   -XfwmTabwinWidget-preview-size: 32px;
-  box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 0);
 }
 
 /*******************************
@@ -1287,7 +1286,7 @@ XfdesktopIconView.view:active {
 }  
 .lightdm-gtk-greeter #login_window #user_image_border {
 	padding: 2px;
-	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
+	box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 }
 
 /*@define-color theme_fg_color @default_fg_normal;
