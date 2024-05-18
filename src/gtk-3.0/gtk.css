@@ -87,20 +87,21 @@ selection:focus,
 /***********
  * buttons *
  ***********/
-button,
-.button {
+button {
 	background: @default_bg_normal;
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 5px;
 }
 /* border-image requiered for Evolution column headers */
 .button {
-	background: @default_bg_normal;
+  background: @default_bg_normal;
 	border-image: url("assets/button.png") 2 / 2px stretch;
   box-shadow: none;
 	padding: 5px;
 }
-button:hover, .button:hover, button.link:hover {
+button:hover,
+.button:hover,
+button.link:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
   box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 shade(@default_bg_prelight, 0);
@@ -457,7 +458,7 @@ menubar decoration,
 	border: 0;
 }
 menu {
-	background: @default_bg_normal;
+	background-color: @default_bg_normal;
   box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 shade(@default_bg_normal, 1.3), inset 1 1 shade(@default_bg_normal, 0), inset -1 -1 shade(@default_bg_normal, 0);
 	padding: 2px;
 }
@@ -478,7 +479,7 @@ menuitem:hover {
 	color: @colored_fg_prelight;
 }
 menu separator {
-box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+  box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
 	margin: .2em .4em;
 	padding: 1px;
 }
@@ -498,7 +499,11 @@ menuitem > arrow {
 /*************
  * notebooks *
  *************/
-notebook.frame > stack {
+/*notebook {
+	background: @default_bg_normal;
+}*/
+notebook.frame > stack, notebook > stack {
+  background-color: @default_bg_normal;
 	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
   padding: 2px;
 }
@@ -526,7 +531,7 @@ notebook tab {
 	color: @default_fg_active;
 }
 notebook tab:focus {
-	outline-color: default_fg_normal;
+	outline-color: @default_fg_normal;
   outline-style: dotted;
   outline-offset: -4px;
   outline-width: 1px;
@@ -733,6 +738,7 @@ paned.vertical > separator {
  **********/
 frame > border {
   box-shadow: inset 2 2 shade(@default_bg_normal, 1.3), inset -2 -2 shade(@default_bg_normal, 0.7), inset 1 1 shade(@default_bg_normal, 0.7), inset -1 -1 shade(@default_bg_normal, 1.3);
+  padding: 4px;
 }
 frame > label {
   padding-left: 4px;
@@ -1076,7 +1082,7 @@ dialog colorchooser colorswatch:selected * {
 	background: transparent;
 }
 colorchooser .popover {
-	background: @default_bg_normal;
+	background-color: @default_bg_normal;
 	box-shadow: inset -2 -2 shade(@default_bg_normal, 0.7), inset 2 2 @default_bg_normal, inset 1 1 shade(@default_bg_normal, 1.3), inset -1 -1 shade(@default_bg_normal, 0);
 }
 
@@ -1086,6 +1092,9 @@ colorchooser .popover {
 printdialog paper {
 	background-color: @default_base_normal;
 	border: solid 1px @default_text_normal;
+}
+printdialog > box {
+	background-color: @default_bg_normal;
 }
 
 /*********************
@@ -1117,11 +1126,13 @@ spinner:checked {
 /*********************
  * XFCE whisker menu *
  *********************/
+
 #whiskermenu-button {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
   box-shadow: inset -4 -4 shade(@default_bg_normal, 0.7), inset 4 4 @default_bg_normal, inset 3 3 shade(@default_bg_normal, 1.3), inset -3 -3 shade(@default_bg_normal, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
+/*
 #whiskermenu-button image,
 #applicationmenu-button image {
   padding-left: 5px;
@@ -1130,20 +1141,24 @@ spinner:checked {
 #applicationmenu-button label {
   padding-right: 5px;
 }
+*/
 #whiskermenu-button:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
   box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3 3 shade(@default_bg_prelight, 1.3), inset -3 -3 shade(@default_bg_prelight, 0), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
+/*
 #whiskermenu-button:active {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
 }
+*/
 #whiskermenu-button:checked {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
   box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3 3 shade(@default_bg_active, 0.7), inset -3 -3 shade(@default_bg_active, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
+/*
 #whiskermenu-window {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
@@ -1160,6 +1175,7 @@ spinner:checked {
 	color: @default_fg_prelight;
   box-shadow: inset -2 -2 shade(@default_bg_prelight, 0.7), inset 2 2 @default_bg_prelight, inset 1 1 shade(@default_bg_prelight, 1.3), inset -1 -1 #000000;
 }
+
 #whiskermenu-window button:active {
 	background-color: @default_bg_active;
 	color: @default_fg_active;
@@ -1170,18 +1186,22 @@ spinner:checked {
 	color: @default_fg_active;
   box-shadow: inset -4 -4 @default_bg_active, inset 4 4 shade(@default_bg_active, 0), inset 3 3 shade(@default_bg_active, 0.7), inset -3 -3 shade(@default_bg_active, 1.3), inset -2 -2 @default_bg_normal, inset 2 2 @default_bg_normal;
 }
+
 #whiskermenu-window treeview {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
 }
+*/
 #whiskermenu-window treeview:hover {
 	background-color: @colored_bg_prelight;
 	color: @colored_fg_prelight;
 }
+/*
 #whiskermenu-window treeview:selected {
 	background-color: @colored_bg_prelight;
 	color: @colored_fg_prelight;
 }
+*/
 
 /***************
  * XFCE4 panel *
