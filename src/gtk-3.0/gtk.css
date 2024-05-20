@@ -764,6 +764,14 @@ frame > label {
   padding-right: 4px;
 }
 
+/*********
+* stacks *
+**********/
+
+stack {
+box-shadow: none;
+}
+
 /*********************
  * preferencesgroups *
  *********************/
