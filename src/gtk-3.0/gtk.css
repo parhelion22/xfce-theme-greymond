@@ -566,19 +566,23 @@ notebook tab:focus {
   outline-width: 1px;
 }
 notebook header.top tab {
-  border-image: url("assets/notebook-tab-top.png") 2 / 2px stretch;
+  box-shadow: inset -2px 0px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px 0px shade(@default_bg_normal, 0); 
+  border-radius: 2px 2px 0px 0px;
 	padding: 5px;
 }
 notebook header.bottom tab {
-	border-image: url("assets/notebook-tab-bottom.png") 2 / 2px stretch;
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 0px @default_bg_normal, inset 1px 0px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0); 
+  border-radius: 0px 0px 2px 2px;
 	padding: 5px;
 }
 notebook header.left tab {
-	border-image: url("assets/notebook-tab-left.png") 2 / 2px stretch;
+  box-shadow: inset 0px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset 0px -1px shade(@default_bg_normal, 0); 
+  border-radius: 2px 0px 0px 2px;
 	padding: 5px;
 }
 notebook header.right tab {
-	border-image: url("assets/notebook-tab-right.png") 2 / 2px stretch;
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 0px 2px @default_bg_normal, inset 0px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0); 
+  border-radius: 0px 2px 2px 0px;
 	padding: 5px;
 }
 notebook header tab:checked {
@@ -628,7 +632,7 @@ notebook tab button {
 expander arrow {
 	min-width: 16px;
 	min-height: 16px;
-	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");	
+	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
 }
 expander arrow:checked {
 	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
@@ -763,6 +767,26 @@ paned.vertical > separator {
 /**********
  * frames *
  **********/
+frame {
+  padding-top: .2em;
+}
+frame.border-inset {
+  box-shadow: inset -2px -2px @default_bg_normal, inset 2px 8px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 7px shade(@default_bg_normal, 0.7), inset 0px 6px @default_bg_normal;
+}
+frame.border-outset {
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 8px @default_bg_normal, inset 1px 7px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0), inset 0px 6px @default_bg_normal;
+}
+frame.border-groove {
+  box-shadow: inset 2px 8px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 7px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3), inset 0px 6px @default_bg_normal;
+}
+frame.border-ridge {
+  box-shadow: inset 2px 8px shade(@default_bg_normal, 0.7), inset -2px -2px shade(@default_bg_normal, 1.3), inset 1px 7px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0.7), inset 0px 6px @default_bg_normal;
+}
+frame label {
+  background-color: @default_bg_normal;
+	margin-left: 4px;
+}
+/*
 frame > border {
   box-shadow: inset 2px 2px shade(@default_bg_normal, 1.3), inset -2px -2px shade(@default_bg_normal, 0.7), inset 1px 1px shade(@default_bg_normal, 0.7), inset -1px -1px shade(@default_bg_normal, 1.3);
   padding: 2px;
@@ -771,6 +795,7 @@ frame > label {
   padding-left: 4px;
   padding-right: 4px;
 }
+*/
 
 /*********
 * stacks *
