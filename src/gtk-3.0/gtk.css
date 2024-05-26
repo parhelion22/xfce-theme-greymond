@@ -114,9 +114,9 @@ button.link:hover {
   border-image: none;
 }
 /* required for print dialog */
-button:hover box,
-.button:hover box,
-button.link:hover box {
+button:hover box, button:hover label,
+.button:hover box, .button:hover label,
+button.link:hover box, button.link:hover label {
 	background-color: transparent;
 }
 button:active,
@@ -282,14 +282,14 @@ scrollbar.horizontal button.down {
  * checkboxes *
  **************/
 check {
-	margin: .3em .4em .3em .3em;
+	margin: .3em .3em .3em .3em;
 	min-height: 16px;
 	min-width: 16px;
 }
 checkbutton label {
-	padding-right: .5em;
+/*	padding-right: .5em;*/
 }
-checkbutton:hover {
+checkbutton:hover, checkbutton:hover label {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
 }
@@ -332,14 +332,14 @@ check:indeterminated:disabled {
  * radion buttons *
  ******************/
 radio {
-	margin: .3em .4em .3em .3em;
+	margin: .3em .3em .3em .3em;
 	min-height: 16px;
 	min-width: 16px;
 }
 radiobutton label {
-	padding-right: .5em;
+/*	padding-right: .5em;*/
 }
-radiobutton:hover {
+radiobutton:hover, radiobutton:hover label {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
 }
@@ -540,6 +540,11 @@ notebook > stack {
   padding: 2px;
 }
 */
+.pavucontrol-window notebook stack {
+  background-color: @default_bg_normal;
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
+  padding: 2px
+}
 notebook header.top tabs {
 	margin-top: .2em;
 }
