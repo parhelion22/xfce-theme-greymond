@@ -95,12 +95,14 @@ selection:focus,
  ***********/
 button {
 	background-color: @default_bg_normal;
+  color: @default_fg_normal;
   box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
 	padding: 5px;
 }
 /* border-image requiered for Evolution column headers */
 .button {
   background-color: @default_bg_normal;
+  color: @default_fg_normal;
 	border-image: url("assets/button.png") 2 / 2px stretch;
   box-shadow: none;
 	padding: 5px;
@@ -141,7 +143,7 @@ checkbutton:hover, radiobutton:hover {
 }
 checkbutton:disabled, radiobutton:disabled {
 	color: @default_fg_insensitive;
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3);;
 }
 checkbutton label, radiobutton label {
 	padding-right: .5em;
@@ -182,7 +184,7 @@ button:disabled,
 .button:disabled {
 	background-color: @default_bg_insensitive;
 	color: @default_fg_insensitive;
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3);;
 	-gtk-icon-effect: dim;
 }
 button.link {
@@ -281,38 +283,71 @@ scrollbar.horizontal button.down {
 /**************
  * checkboxes *
  **************/
-check {
-	margin: .3em .3em .3em .3em;
-	min-height: 16px;
-	min-width: 16px;
+checkbutton {
+	background-color: transparent; 
+  padding: 3px; 
 }
-checkbutton label {
-/*	padding-right: .5em;*/
-}
-checkbutton:hover, checkbutton:hover label {
+checkbutton:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
 }
+/*
+checkbutton:active {
+	background-color: @default_bg_active;
+	color: @default_fg_active;
+}
+*/
 checkbutton:disabled {
 	color: @default_fg_insensitive;
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3);
+	-gtk-icon-effect: dim;
 }
-check:disabled, radio:disabled {
-	border-color: @default_base_insensitive;
+checkbutton label {
+  padding-left: 3px;
+}
+check {
+	background-color: transparent;
+	min-height: 16px;
+	min-width: 16px;
 }
 check {
 	-gtk-icon-source: url("assets/checkbox-unchecked.png");
+}
+check:not(:focus) {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/checkbox-unchecked.png");
+}
+check:selected:not(:focus) {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/checkbox-unchecked.png");
+}
+check:selected:not(:focus):disabled {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/checkbox-unchecked-disabled.png");
 }
 check:active {
 	-gtk-icon-source: url("assets/checkbox-unchecked-active.png");
 }
 check:disabled {
+  background-color: transparent;
 	-gtk-icon-source: url("assets/checkbox-unchecked-disabled.png");
 }
 check:checked {
 	-gtk-icon-source: url("assets/checkbox-checked.png");
 }
+check:checked:not(:focus) {
+	-gtk-icon-source: url("assets/checkbox-checked.png");
+}
+check:checked:selected:not(:focus) {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/checkbox-checked.png");
+}
+check:checked:selected:not(:focus):disabled {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/checkbox-checked-disabled.png");
+}
 check:checked:active {
+  background-color: transparent;
 	-gtk-icon-source: url("assets/checkbox-checked-active.png");
 }
 check:checked:disabled {
@@ -331,24 +366,48 @@ check:indeterminated:disabled {
 /******************
  * radion buttons *
  ******************/
-radio {
-	margin: .3em .3em .3em .3em;
-	min-height: 16px;
-	min-width: 16px;
+radiobutton {
+	background-color: @default_bg_normal;
+	color: @default_fg_normal;
+  padding: 3px;
 }
-radiobutton label {
-/*	padding-right: .5em;*/
-}
-radiobutton:hover, radiobutton:hover label {
+radiobutton:hover {
 	background-color: @default_bg_prelight;
 	color: @default_fg_prelight;
 }
+/*
+radiobutton:active {
+	background-color: @default_bg_active;
+	color: @default_fg_active;
+}
+*/
 radiobutton:disabled {
 	color: @default_fg_insensitive;
-	text-shadow: 1px 1px white;
+	text-shadow: 1px 1px shade(@default_bg_insensitive, 1.3);
+	-gtk-icon-effect: dim;
+}
+radiobutton label {
+  padding-left: 3px;
+}
+radio {
+	background-color: transparent;
+	min-height: 16px;
+	min-width: 16px;
 }
 radio {
 	-gtk-icon-source: url("assets/radio-unchecked.png");
+}
+radio:not(:focus) {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/radio-unchecked.png");
+}
+radio:selected:not(:focus) {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/radio-unchecked.png");
+}
+radio:selected:not(:focus):disabled {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/radio-unchecked-disabled.png");
 }
 radio:active {
 	-gtk-icon-source: url("assets/radio-unchecked-active.png");
@@ -356,9 +415,20 @@ radio:active {
 radio:disabled {
 	-gtk-icon-source: url("assets/radio-unchecked-disabled.png");
 }
-
 radio:checked {
 	-gtk-icon-source: url("assets/radio-checked.png");
+}
+radio:checked:not(:focus) {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/radio-checked.png");
+}
+radio:checked:selected:not(:focus) {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/radio-checked.png");
+}
+radio:checked:selected:not(:focus):disabled {
+  background-color: transparent;
+	-gtk-icon-source: url("assets/radio-checked-disabled.png");
 }
 radio:checked:active {
 	-gtk-icon-source: url("assets/radio-checked-active.png");
@@ -446,6 +516,9 @@ treeview.view:selected,
 treeview.view.sorted:selected {
   background-color: @default_base_selected;
   color: default_text_selected;
+}
+treeview.view {
+
 }
 
 /***************
@@ -1020,7 +1093,7 @@ tooltip.background  {
 	color: @default_fg_normal;
 }
 tooltip *, .tooltip * {
-	margin: -2px;
+	margin: -1px;
   border: none;
 }
 
