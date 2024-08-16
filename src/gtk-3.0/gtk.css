@@ -1400,9 +1400,9 @@ spinner:checked {
 */
 /* required for workspace switcher buttons */
 
-.xfce4-panel.background button:first-child label {
+/*.xfce4-panel.background button:first-child label {
   padding: 5px;
-}
+}*/
 .xfce4-panel.background button:hover {
   box-shadow: inset -4 -4 shade(@default_bg_prelight, 0.7), inset 4 4 @default_bg_prelight, inset 3px 3px shade(@default_bg_prelight, 1.3), inset -3px -3px shade(@default_bg_prelight, 0), inset -2px -2px @default_bg_normal, inset 2px 2px @default_bg_normal;
 }
