@@ -46,7 +46,7 @@ A suitable classic mouse cursor theme is "DMZ (White)", which is available as "x
 
 # Color Variants
 
-Although "Greymond Concrete" can be seen as the default color variant for this theme, there are a few other familiar color variants. Colors are mostly defined within "./gtk-2.0/gtkrc" and "./gtk-3.0/colors.css" for the GTK 2 and GTK 3 theme, respectively. Basically, all colors can be adjusted by changing the color values within these files.
+"Greymond Concrete" can be seen as the default color variant for this theme, but there are a few other familiar color variants. Colors are mostly defined within "./gtk-2.0/gtkrc" and "./gtk-3.0/colors.css" for the GTK 2 and GTK 3 theme, respectively. Basically, all colors can be adjusted by changing the color values within these files.
 
 ![Color Variants](https://github.com/parhelion22/xfce-theme-greymond/blob/main/ColorVariants.png)
 
