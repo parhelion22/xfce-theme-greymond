@@ -1,0 +1,56 @@
+/* default */
+@define-color default_fg_normal 		    #000000; /* control text */
+@define-color default_fg_prelight 		  shade(@default_fg_normal, 1.1); /* hovered control text */
+@define-color default_fg_selected 		  shade(@default_bg_selected, 4); /* active window title text */
+@define-color default_fg_active 		    @default_fg_normal; /* pressed control text */
+@define-color default_fg_insensitive 	  shade(@default_bg_normal, 0.7); /* disabled control text, inactive window title text */
+
+@define-color default_bg_normal 		    #DEDEA0; /* #CCC9C2 */ /* control background */
+@define-color default_bg_prelight 		  shade(@default_bg_normal, 1.1); /* hovered control background */
+@define-color default_bg_selected 		  #808000; /* #4B6983 */ /* colored controls background, active window title */
+@define-color default_bg_active 		    shade(@default_bg_normal, 0.9); /* pressed control */
+@define-color default_bg_insensitive 	  @default_bg_normal; /* disabled control */
+
+@define-color default_base_normal 		  shade(@default_bg_normal, 1.3); /* entry */
+@define-color default_base_prelight 	  @default_base_normal; /* ? */
+@define-color default_base_selected 	  @default_bg_selected;  /* entry selection background*/
+@define-color default_base_active		    shade(@default_bg_normal, 0.7); /* unfocussed entry selection background*/
+@define-color default_base_insensitive  shade(@default_bg_normal, 1.1); /* disabled entry background*/
+
+@define-color default_text_normal 		  @default_fg_normal; /* entry text */
+@define-color default_text_prelight 	  @default_fg_prelight; /* hovered control text */
+@define-color default_text_selected 	  shade(@default_bg_selected, 4); /* entry selection text */
+@define-color default_text_active 		  shade(@default_bg_selected, 4); /* unfocussed entry selection text */
+@define-color default_text_insensitive	shade(@default_bg_normal, 0.7); /* unfocussed entry text */
+
+/* colored */
+@define-color colored_fg_prelight 		  shade(@default_bg_selected, 4);
+
+@define-color colored_bg_normal 		    shade(@default_bg_normal, 0.9);
+@define-color colored_bg_prelight 		  @default_bg_selected;
+
+/*@define-color colored_text_prelight     #FFFFFF;*/
+
+/* link */
+@define-color link_fg_normal			      #000080;
+
+/* notification */
+@define-color info_bg_normal 			      #FFFFBF;
+@define-color warning_bg_normal		      #FCAF3E;
+@define-color question_bg_normal	      #8CB0D7;
+@define-color error_bg_normal			      #F03838;
+
+/* legacy */
+@define-color theme_fg_color @default_fg_normal;
+@define-color theme_text_color @default_text_normal;
+@define-color theme_bg_color @default_bg_normal;
+@define-color theme_base_color @default_base_normal;
+@define-color theme_selected_bg_color @default_bg_selected;
+@define-color theme_selected_fg_color @default_fg_selected;
+
+@define-color theme_unfocused_fg_color @default_fg_normal;
+@define-color theme_unfocused_text_color @default_text_normal;
+@define-color theme_unfocused_bg_color @default_bg_normal;
+@define-color theme_unfocused_base_color @default_base_normal;
+@define-color theme_unfocused_selected_bg_color @default_bg_selected;
+@define-color theme_unfocused_selected_fg_color @default_fg_selected;

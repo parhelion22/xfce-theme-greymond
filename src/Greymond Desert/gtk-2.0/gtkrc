@@ -1,0 +1,83 @@
+style "Default"
+{
+	fg[NORMAL]        	= "#000000"
+	fg[PRELIGHT]      	= "#000000" 
+	fg[SELECTED]      	= "#FFFFFF"
+	fg[ACTIVE]        	= "#000000" 
+	fg[INSENSITIVE]   	= "#A79471" #= 0.7 * bg[NORMAL]
+
+	bg[NORMAL]			    = "#D5CCBB" 
+	bg[PRELIGHT]      	= "#E4DFD4" #= 1.1 * bg[NORMAL]
+	bg[SELECTED] 	  	  = "#008080" 
+	bg[ACTIVE]  	  	  = "#C6B9A2" #= 0.9 * bg[NORMAL]
+	bg[INSENSITIVE]   	= "#D5CCBB" #= bg[NORMAL]
+
+	base[NORMAL]      	= "#FFFFFF" #= 1.3 * bg[NORMAL]
+	base[PRELIGHT]    	= "#FFFFFF"
+	base[SELECTED]    	= "#008080" #= bg[SELECTED]
+	base[ACTIVE]     	  = "#A79471" #= 0.7 * bg[NORMAL]
+	base[INSENSITIVE]  	= "#E4DFD4" #= 1.1 * bg[NORMAL]
+
+	text[NORMAL]		    = "#000000" 
+	text[PRELIGHT]		  = "#000000"
+	text[SELECTED]		  = "#FFFFFF" 
+	text[ACTIVE]		    = "#FFFFFF" 
+	text[INSENSITIVE]	  = "#A79471" #= 0.7 * bg[NORMAL]
+
+	GtkWidget::link-color				        = "#000080"
+	GtkWidget::visited-link-color	      = "#000080"
+	GtkHTML::alink_color				        = "#000080"
+	GtkHTML::link_color					        = "#000080"
+	GtkHTML::vlink_color				        = "#000080"
+	GnomeHref::link_color				        = "#000080"
+	GtkIMHtml::hyperlink-color		      = "#000080"
+	GtkIMHtml::hyperlink-prelight-color	= "#000080"
+}
+
+style "Colored"
+{
+	fg[PRELIGHT]      	= "#FFFFFF"
+	
+	bg[NORMAL] 			    = "#C6B9A2" #= 0.9 * bg[NORMAL]
+	bg[PRELIGHT]      	= "#008080" #= bg[SELECTED]
+
+#	text[PRELIGHT]    	= "#FFFFFF"
+}
+
+style "MenuItem" #required for QGtkStyle active menu item
+{
+	fg[PRELIGHT]      	= "#FFFFFF"
+	
+	bg[NORMAL] 			    = "#D5CCBB" #= 0.9 * bg[NORMAL]
+	bg[PRELIGHT]      	= "#008080" #= bg[SELECTED]
+
+	text[PRELIGHT]    	= "#FFFFFF"
+
+  engine "pixmap"
+	{
+		image
+		{
+			function    = BOX
+			state       = PRELIGHT
+			file        = "assets/menubar-item-active.png"
+			border      = {0, 0, 0, 0}
+    	}
+  	}
+}
+
+style "xfdesktop-icon-view" {
+XfdesktopIconView::label-alpha = 0
+fg[NORMAL] = "#ffffff"
+fg[SELECTED] = "#ffffff"
+fg[ACTIVE] = "#ffffff"
+}
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+
+widget_class "*" style "Default"
+#widget_class "*ComboBox*" style "Default"
+#widget_class "*Button*" style "Default"
+#widget_class "*Scroll*" style "Default"
+#widget_class "*Menu*" style "Default"
+widget_class "*ProgressBar*" style "Colored"
+widget_class "*MenuItem*" style "MenuItem"
+#widget_class "*ComboBoxEntry*" style "Colored"

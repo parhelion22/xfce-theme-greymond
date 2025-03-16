@@ -1,0 +1,57 @@
+@import url("../gtk-3.0/colors.css");
+@import url("../gtk-3.0/gtk.css");
+
+/*********
+ * menus *
+ *********/
+menubar {
+  padding: 2px;
+}
+
+menubar item label {
+	margin: .4em;
+}
+
+/****************
+ * spinbutton *
+ ****************/
+spinbutton text {	
+	background-color: @default_base_normal;
+	color: @default_text_normal;
+  box-shadow: inset -2px -2px @default_bg_normal, inset 2px 2px shade(@default_bg_normal, 0), inset -1px -1px shade(@default_bg_normal, 1.3), inset 1px 1px shade(@default_bg_normal, 0.7);
+  padding: 4px;
+}
+spinbutton text:disabled {
+	background-color: @default_base_insensitive;
+	color: @default_text_insensitive;
+  -gtk-icon-filter: opacity(0.5);
+}
+
+/**********
+ * window *
+ **********/
+window.csd {
+  box-shadow: inset -2px -2px shade(@default_bg_normal, 0.7), inset 2px 2px @default_bg_normal, inset 1px 1px shade(@default_bg_normal, 1.3), inset -1px -1px shade(@default_bg_normal, 0);
+  border-color: @default_bg_normal;
+  border-width: 0px;
+  border-style: solid;
+  margin: 0px;
+  padding: 2px;
+}
+dialog-host {
+  padding: 2px;
+}
+headerbar {
+  background-color: @default_bg_selected;
+  box-shadow: none;
+  margin: 0px;
+}
+headerbar > windowhandle > box > label {
+  color: @colored_fg_prelight;
+  background-color: @colored_bg_prelight;
+  font-weight: bold;
+  text-align: left;
+  box-shadow: none;
+}
+
+
