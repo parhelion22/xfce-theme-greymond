@@ -463,6 +463,9 @@ window > box > box > stack > scrolledwindow {
 window > box > paned > box > notebook > stack > widget > infobar > revealer > box > box > scrolledwindow {
   box-shadow: none;
 }
+window > box > paned > box > infobar > revealer > box > box > scrolledwindow {
+  box-shadow: none;
+}
 /*infobar button {
   background-color: transparent;
 }*/
