@@ -362,6 +362,17 @@ dialog .view {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
 }
+.flowboxchild:focus,
+.iconview:focus,
+.view:focus,
+.flowboxchild:selected,
+.iconview:selected,
+.view:selected {
+  outline-style: dotted;
+  outline-color: @default_fg_normal;
+  outline-width: 1px;
+  outline-offset: 0px;
+}
 
 /* required for xfce4-color-settings */
 /* TODO: fix */
