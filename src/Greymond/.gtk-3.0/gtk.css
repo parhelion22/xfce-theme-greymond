@@ -5,7 +5,7 @@
  ***********/
 * {
 	-gtk-icon-style: regular;
-	-GtkWidget-link-color: @link_fg_normal;
+/*	-GtkWidget-link-color: @link_fg_normal;*/
 /*    -GtkWidget-cursor-aspect-ratio: 0.1;*/
 }
 .background {
