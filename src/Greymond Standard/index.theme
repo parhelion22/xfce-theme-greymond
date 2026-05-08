@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Greymond (Standard)
+Type=X-GNOME-Metatheme
+Comment=GTK theme aiming to provide a consistent and classic look for GTK 2, GTK 3, and GTK 4 based on the classic "Raleigh" theme.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Greymond (Standard)
+MetacityTheme=
+IconTheme=
+BackgroundImage=
+MonospaceFont=
+ApplicationFont=
+DesktopFont=
+SoundTheme=
+GtkColorScheme=
+
