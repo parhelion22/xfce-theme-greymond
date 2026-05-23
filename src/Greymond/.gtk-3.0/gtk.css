@@ -96,10 +96,20 @@ scrollbar slider:hover {
     inset 1px 1px @default_bg_prelight_bevel_hilight,
     inset -1px -1px @default_bg_prelight_bevel_darkshadow;
 }
+button.toggle:checked:hover {	
+	background-color: @default_bg_prelight;
+	color: @default_fg_prelight;
+  box-shadow:
+    inset -2px -2px @default_bg_prelight_bevel_light,
+    inset 2px 2px @default_bg_prelight_bevel_darkshadow,
+    inset -1px -1px @default_bg_prelight_bevel_hilight,
+    inset 1px 1px @default_bg_prelight_bevel_shadow;
+}
 button:active,
 .button:active,
 button:checked,
-button.toggle:checked {	
+button.toggle:checked,
+button.toggle:checked:active {	
 	background-color: @default_bg_active;
 	color: @default_fg_active;
 	box-shadow:
@@ -107,10 +117,6 @@ button.toggle:checked {
     inset 2px 2px @default_bg_active_bevel_darkshadow,
     inset -1px -1px @default_bg_active_bevel_hilight,
     inset 1px 1px @default_bg_active_bevel_shadow;
-}
-button.toggle:checked:hover {	
-	background-color: @default_bg_prelight;
-	color: @default_fg_prelight;
 }
 button:focus,
 .button:focus,
