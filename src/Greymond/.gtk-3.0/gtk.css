@@ -1593,7 +1593,7 @@ window > deck box {
     inset -4px -4px @default_bg_normal_bevel_shadow,		
 		inset 3px 3px @default_bg_normal_bevel_hilight,
 		inset -3px -3px @default_bg_normal_bevel_darkshadow,
-		inset -2px -2px @default_bg_normal_bevel_light,
+		inset -2px -2px @default_bg_normal,
 		inset 2px 2px @default_bg_normal;
 }
 .xfce4-panel button:hover {
@@ -1602,7 +1602,7 @@ window > deck box {
     inset -4px -4px @default_bg_prelight_bevel_shadow,
 		inset 3px 3px @default_bg_prelight_bevel_hilight,
 		inset -3px -3px @default_bg_prelight_bevel_darkshadow,
-		inset -2px -2px @default_bg_normal_bevel_light,
+		inset -2px -2px @default_bg_normal,
 		inset 2px 2px @default_bg_normal;
 }
 .xfce4-panel button:active,
@@ -1612,7 +1612,7 @@ window > deck box {
 		inset 4px 4px @default_bg_normal_bevel_darkshadow,
     inset -3px -3px @default_bg_normal_bevel_hilight,
 		inset 3px 3px @default_bg_normal_bevel_shadow,
-		inset -2px -2px @default_bg_normal_bevel_light,
+		inset -2px -2px @default_bg_normal,
 		inset 2px 2px @default_bg_normal;
 }
 .xfce4-panel button:checked:hover {
@@ -1621,7 +1621,7 @@ window > deck box {
 		inset 4px 4px @default_bg_normal_bevel_darkshadow,
     inset -3px -3px @default_bg_normal_bevel_hilight,
 		inset 3px 3px @default_bg_normal_bevel_shadow,		
-		inset -2px -2px @default_bg_normal_bevel_light,
+		inset -2px -2px @default_bg_normal,
 		inset 2px 2px @default_bg_normal;
 	background: @default_bg_prelight;
 }
