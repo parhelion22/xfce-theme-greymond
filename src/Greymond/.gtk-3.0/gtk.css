@@ -1296,9 +1296,6 @@ printdialog paper {
 	background-color: @default_base_normal;
 	border: solid 1px @default_text_normal;
 }
-printdialog box {
-	background-color: @default_bg_normal;
-}
 printdialog .dialog-vbox {
 	background-color: @default_bg_normal;
 }
