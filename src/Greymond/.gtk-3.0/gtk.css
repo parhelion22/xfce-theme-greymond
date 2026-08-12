@@ -202,24 +202,6 @@ scrollbar button {
 	min-width: 10px;
 	padding: 2px;
 }
-scrollbar slider {
-	background-color: @default_bg_normal;
-	color: @default_fg_normal;
-	box-shadow:
-    inset 2px 2px @default_bg_normal_bevel_light,
-    inset -2px -2px @default_bg_normal_bevel_shadow,
-    inset 1px 1px @default_bg_normal_bevel_hilight,
-    inset -1px -1px @default_bg_normal_bevel_darkshadow;
-}
-scrollbar slider:hover {
-	background-color: @default_bg_prelight;
-	color: @default_fg_prelight;
-	box-shadow:
-    inset 2px 2px @default_bg_prelight_bevel_light,
-    inset -2px -2px @default_bg_prelight_bevel_shadow,
-    inset 1px 1px @default_bg_prelight_bevel_hilight,
-    inset -1px -1px @default_bg_prelight_bevel_darkshadow;
-}
 scrollbar.vertical button.up {
 	-gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
