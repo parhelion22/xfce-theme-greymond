@@ -12,7 +12,9 @@ Developed on Arch-based [Manjaro Linux](https://manjaro.org/) running the [Xfce 
 
 # Installation
 
-Installation differs depending on whether the theme should only be available to the current user or whether it should be available system-wide (for example in order to use it as a theme for the LightDM display manager). For use by the current user, simply copy the directory "Greymond" to you theme directory, for example "\~/.themes/" or "\~/.local/share/themes/". For system-wide use, copy the directory "Greymond" to "/usr/share/themes/" (root privileges required).
+Installation differs depending on whether the theme should only be available to the current user or whether it should be available system-wide (for example in order to use it as a theme for the LightDM display manager). For use by the current user, copy all directories within the directory "src" to your theme directory, for example "\~/.themes/" or "\~/.local/share/themes/". For system-wide use, copy all directories within "src" to "/usr/share/themes/" (root privileges required).
+
+Make sure that symbolic links are preserved when copying the directories.
 
 ## Applying the theme
 
@@ -49,6 +51,12 @@ A suitable classic mouse cursor theme is "DMZ (White)", which is available as "x
 "Greymond Concrete" can be seen as the default color variant for this theme, but there are a few other familiar color variants. Colors are mostly defined within "./gtk-2.0/gtkrc" and "./gtk-3.0/colors.css" for the GTK 2 and GTK 3 theme, respectively. Basically, all colors can be adjusted by changing the color values within these files.
 
 ![Color Variants](https://github.com/parhelion22/xfce-theme-greymond/blob/main/ColorVariants.png)
+
+# Uninstallation
+
+Before uninstalling Greymond, select a different application and window manager theme in the Xfce settings.
+
+To uninstall Greymond, remove the "Greymond" directory and all directories whose names begin with "Greymond-" from the theme directory to which they were previously copied: Either "\~/.themes/" or "\~/.local/share/themes/" for an installation available only to the current user or "/usr/share/themes/" for a system-wide installation (root privileges required).
 
 # License
 
