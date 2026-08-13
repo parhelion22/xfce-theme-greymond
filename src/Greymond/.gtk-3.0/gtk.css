@@ -1378,7 +1378,7 @@ dialog > box > grid > notebook > stack > scrolledwindow {
 /****************
  * LibreOffice *
  ****************/
-/*required for LibreOficce */
+/*required for LibreOffice */
 window > grid > widget > widget > scrolledwindow > viewport > grid > box > widget > scrollbar.vertical,
 window > grid > widget > widget > scrolledwindow > viewport > grid > box > widget > scrollbar.horizontal {
 	margin: 0px;
