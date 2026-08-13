@@ -16,7 +16,7 @@ Installation differs depending on whether the theme should only be available to 
 
 ## Applying the theme
 
-The following steps can be applied as desired and independently of each other. It is assumed that an Arch-based Linux distribution is used with the Xfce desktop environment. The procedure in other distributions and desktop environments may varry to a greater or lesser extent.
+The following steps can be applied as desired and independently of each other. It is assumed that an Arch-based Linux distribution is used with the Xfce desktop environment. The procedure in other distributions and desktop environments may vary to a greater or lesser extent.
 
 ### GTK Application Style
 
@@ -28,9 +28,9 @@ One way for QT-based applications to use the theme is by using the "QGtkStyle" t
 
 For this to work you have to make sure that the QT 5 and QT 6 configuration tools ("qt5ct", "qt6ct") are installed from the repositories. Also required are the packages "[qt5-styleplugins](https://aur.archlinux.org/packages/qt5-styleplugins)" and "[qt6gtk2](https://aur.archlinux.org/packages/qt6gtk2)" from the AUR, which contain the "QGtkStyle" for QT 5 and QT 6, respectively. After installed, set the environment variable "QT_QPA_PLATFORMTHEME" to "qt5ct", for example by adding "export QT_QPA_PLATFORMTHEME="qt5ct"" to "\~/.profile". After that, select "gtk2" within the "QT 5 Configuration Tool" (qt5ct), tab "Appearance", Combobox "Style", and select "qt6gtk2" under "QT 6 Configuration Tool" (qt5ct), tab "Appearance", Combobox "Style".
 
-### Xfce Window Manager
+### Xfce Window Manager (Xfwm4)
 
-In order for the Xfce Window Manager (xfwm4) to use the theme, simply select "Greymond" within "Window Manager" settings (xfwm4-settings), tab "Style". The theme will automatically follow the colors of this or any other GTK 3 theme.
+In order for the Xfce Window Manager (xfwm4) to use the theme, simply select "Greymond" within "Window Manager" settings (xfwm4-settings), tab "Style". The theme will automatically follow the colors of this or any other GTK 3 theme. Alternatively, activate the checkbox "Set matching Xfwm4 theme if there is one" within "Appearance" settings (xfce4-appearance-settings), tab "Style", when selecting one of the color variants as application style.
 
 ### Xfce Notifications System
 
