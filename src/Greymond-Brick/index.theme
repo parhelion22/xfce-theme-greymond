@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=Greymond-Standard
+Name=Greymond-Brick
 Type=X-GNOME-Metatheme
 Comment=GTK theme aiming to provide a consistent and classic look for GTK 2, GTK 3, and GTK 4 based on the classic "Raleigh" theme.
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Greymond-Standard
+GtkTheme=Greymond-Brick
 MetacityTheme=
 IconTheme=
 BackgroundImage=
