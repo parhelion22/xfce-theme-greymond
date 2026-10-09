@@ -1133,6 +1133,7 @@ calendar.highlight {
  ************/
 .info {
 	background-color: @info_bg_normal;
+  color: @black;
 	box-shadow:
 		inset 2px 2px @info_bg_normal_bevel_light,
     inset -2px -2px @info_bg_normal_bevel_shadow,
@@ -1141,6 +1142,7 @@ calendar.highlight {
 }
 .warning {
 	background-color: @warning_bg_normal;
+  color: @black;
 	box-shadow:
 		inset 2px 2px @warning_bg_normal_bevel_light,
     inset -2px -2px @warning_bg_normal_bevel_shadow,
@@ -1149,6 +1151,7 @@ calendar.highlight {
 }
 .question {
 	background-color: @question_bg_normal;
+  color: @black;
 	box-shadow:
 		inset 2px 2px @question_bg_normal_bevel_light,
     inset -2px -2px @question_bg_normal_bevel_shadow,
@@ -1157,6 +1160,7 @@ calendar.highlight {
 }
 .error {
 	background-color: @error_bg_normal;
+  color: @black;
 	box-shadow:
 		inset 2px 2px @error_bg_normal_bevel_light,
     inset -2px -2px @error_bg_normal_bevel_shadow,
