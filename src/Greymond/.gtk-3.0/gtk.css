@@ -1655,6 +1655,7 @@ XfdesktopIconView.view:active {
  *********************/
 #XfceNotifyWindow {
 	background-color: @info_bg_normal;
+  color: @black;
 	box-shadow:
     inset 2px 2px @info_bg_normal_bevel_hilight,
     inset -2px -2px @info_bg_normal_bevel_shadow,
