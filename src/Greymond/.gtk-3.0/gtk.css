@@ -660,10 +660,8 @@ headerbar label.subtitle {
 	color: @default_fg_selected;
 	background-color: @default_bg_selected;
 }
-headerbar.titlebar button.titlebutton.close,
-headerbar.titlebar button.titlebutton.maximize,
-headerbar.titlebar button.titlebutton.minimize {
-	-gtk-icon-style: regular;
+headerbar.titlebar button image {
+	-gtk-icon-style: symbolic;
 }
 window.csd:not(.popup) > decoration,
 dialog.csd > decoration,
