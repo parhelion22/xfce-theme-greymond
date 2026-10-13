@@ -3,9 +3,6 @@
 /***********
  * general *
  ***********/
-* {
-	-gtk-icon-style: regular;
-}
 .background {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
