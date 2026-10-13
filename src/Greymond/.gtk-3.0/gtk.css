@@ -749,18 +749,14 @@ toolbar separator {
  *************/
 statusbar frame {
 	box-shadow:
-    inset -2px -2px @default_bg_normal_bevel_light,
+		inset -2px -2px @default_bg_normal_bevel_light,
 		inset 2px 2px @default_bg_normal_bevel_darkshadow,
 		inset -1px -1px @default_bg_normal_bevel_hilight,
 		inset 1px 1px @default_bg_normal_bevel_shadow;
-	padding: 4px;
+	padding: 2px 4px;
 }
-statusbar {
-	margin: 0px -10px;
-}
-statusbar > separator {
-	margin: 10px;
-	padding: 10px;
+statusbar frame separator {
+	margin: 2px 0px;
 }
 
 /*************
