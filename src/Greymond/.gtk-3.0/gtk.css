@@ -681,6 +681,7 @@ messagedialog.csd > decoration {
  ****************************/
 .app-notification {
 	background-color: @info_bg_normal;
+  color: @black;
 	box-shadow:
     inset -2px -2px @info_bg_normal_bevel_shadow,
 		inset 2px 2px @info_bg_normal_bevel_light,
