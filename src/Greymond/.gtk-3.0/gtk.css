@@ -1575,7 +1575,7 @@ window > deck box {
 		inset -2px -2px @default_bg_normal,
 		inset 2px 2px @default_bg_normal;
 }
-.xfce4-panel button:hover {
+.xfce4-panel button:hover{
 	box-shadow:
     inset 4px 4px @default_bg_prelight_bevel_light,
     inset -4px -4px @default_bg_prelight_bevel_shadow,
@@ -1670,6 +1670,59 @@ XfdesktopIconView.view:active {
 	font-weight: Bold;
 }
 
+/************************
+ * Xfce Docklike Taskbar *
+ ***********************/
+window.xfce-docklike-window > box.menu {		
+	background-color: @default_bg_normal;
+	color: @default_fg_normal;
+	padding: 2px;
+	box-shadow:
+    inset 2px 2px @default_bg_normal_bevel_hilight,
+    inset -2px -2px @default_bg_normal_bevel_shadow,    
+    inset 1px 1px @default_bg_normal_bevel_light,
+    inset -1px -1px @default_bg_normal_bevel_darkshadow;
+}
+#docklike-plugin button.open_group {
+	box-shadow:
+    inset 4px 4px @default_bg_normal_bevel_light,
+    inset -4px -4px @default_bg_normal_bevel_shadow,		
+		inset 3px 3px @default_bg_normal_bevel_hilight,
+		inset -3px -3px @default_bg_normal_bevel_darkshadow,
+		inset -2px -2px @default_bg_normal,
+		inset 2px 2px @default_bg_normal;
+}
+#docklike-plugin button.open_group:hover {
+	box-shadow:
+    inset 4px 4px @default_bg_prelight_bevel_light,
+    inset -4px -4px @default_bg_prelight_bevel_shadow,
+		inset 3px 3px @default_bg_prelight_bevel_hilight,
+		inset -3px -3px @default_bg_prelight_bevel_darkshadow,
+		inset -2px -2px @default_bg_normal,
+		inset 2px 2px @default_bg_normal;
+}
+#docklike-plugin button.active_group {
+	background-color: @default_bg_active;
+	color: @default_fg_active;
+	box-shadow:
+    inset -4px -4px @default_bg_active_bevel_light,
+		inset 4px 4px @default_bg_normal_bevel_darkshadow,
+    inset -3px -3px @default_bg_normal_bevel_hilight,
+		inset 3px 3px @default_bg_normal_bevel_shadow,
+		inset -2px -2px @default_bg_normal,
+		inset 2px 2px @default_bg_normal;
+}
+#docklike-plugin button.active_group:hover {
+  background-color: @default_bg_prelight;
+	box-shadow:
+    inset -4px -4px @default_bg_active_bevel_light,
+		inset 4px 4px @default_bg_normal_bevel_darkshadow,
+    inset -3px -3px @default_bg_normal_bevel_hilight,
+		inset 3px 3px @default_bg_normal_bevel_shadow,		
+		inset -2px -2px @default_bg_normal,
+		inset 2px 2px @default_bg_normal;	
+}
+ 
 /***********
  * LightDM *
  ***********/
