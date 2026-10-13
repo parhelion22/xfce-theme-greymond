@@ -699,18 +699,16 @@ messagedialog.csd > decoration {
  * popovers *
  ************/
 popover > stack > box,
-popover > box {
+popover.scale-popup > box {
 	margin: -10px;
 }
 popover.background {
 	background: @default_bg_normal;
 	box-shadow:
     inset -1px -1px @default_bg_normal_bevel_shadow,
-		inset 2px 2px @default_bg_normal_bevel_light,
-		inset 1px 1px @default_bg_normal_bevel_hilight;
-	padding: 1px;
+    inset 1px 1px @default_bg_normal_bevel_hilight;
 	border: 1px solid @default_bg_normal_bevel_darkshadow;
-}
+}    
 popover.background modelbutton:hover {
 	background: @colored_bg_prelight;
 	color:	@colored_fg_prelight;
