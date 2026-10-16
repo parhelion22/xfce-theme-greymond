@@ -36,7 +36,7 @@ window.csd {
   border-width: 0px;
   border-style: solid;
   margin: 0px;
-  padding: 2px;
+  padding: 3px;
 }
 dialog-host {
   padding: 2px;
@@ -53,5 +53,6 @@ headerbar > windowhandle > box > label {
   text-align: left;
   box-shadow: none;
 }
+
 
 
