@@ -1312,6 +1312,7 @@ printdialog > box > box > notebook > stack > scrolledwindow:last-child > viewpor
 	to { -gtk-icon-transform: rotate(1turn); }
 }
 spinner {
+  -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 	background-color: transparent;
 	opacity: 0;
 	min-height: 12px;
