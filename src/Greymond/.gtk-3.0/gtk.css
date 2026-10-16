@@ -675,6 +675,16 @@ messagedialog.csd > decoration {
 		inset -1px -1px @default_bg_normal_bevel_darkshadow;
 	padding: 4px;
 }
+headerbar:backdrop,
+.titlebar:backdrop,
+headerbar .title:backdrop,
+headerbar .subtitle:backdrop,
+.titlebar .title:backdrop,
+.titlebar .subtitle:backdrop,
+headerbar > windowhandle > box > label:backdrop {
+	background-color: @default_fg_insensitive;
+	color: @default_bg_insensitive;
+}
 
 /****************************
  * application notification *
