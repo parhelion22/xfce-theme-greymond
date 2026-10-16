@@ -446,6 +446,9 @@ menuitem:hover {
 	background-color: @colored_bg_prelight;
 	color: @colored_fg_prelight;
 }
+menuitem:disabled {
+	-gtk-icon-effect: dim;
+}
 menu separator {
 	box-shadow:
     inset 2px 2px @default_bg_normal_bevel_hilight,
