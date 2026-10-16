@@ -340,7 +340,7 @@ dialog .view {
 	outline-color: @default_fg_normal;
 	outline-style: dotted;
 	outline-width: 1px;
-	outline-offset: 0px;
+	outline-offset: -1px;
 }
 textview {
 	background-color: @default_base_normal;
