@@ -3,6 +3,9 @@
 /***********
  * general *
  ***********/
+* {
+	-gtk-icon-style: regular;
+}
 .background {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
@@ -1443,6 +1446,13 @@ window > box > notebook > stack > box > scrolledwindow {
 		inset 1px 1px @default_bg_normal_bevel_hilight,
 		inset -1px -1px @default_bg_normal_bevel_darkshadow;
 	padding: 2px;
+}
+
+/**********
+ * Thunar *
+ **********/
+window.thunar image {
+    -gtk-icon-style: requested;
 }
 
 /***********
