@@ -652,8 +652,7 @@ headerbar,
 	padding: 2px;
 }
 headerbar .title,
-headerbar label.title,
-.title {
+.titlebar .title {
 	color: @default_fg_selected;
 	background-color: @default_bg_selected;
 	font-weight: bold;
