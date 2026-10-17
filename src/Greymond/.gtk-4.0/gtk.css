@@ -12,6 +12,29 @@ menubar item label {
 	margin: .4em;
 }
 
+/* GTK 4 draws popover frames on the contents node. */
+popover.menu {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+popover.menu > contents {
+	background-color: @default_bg_normal;
+	border: none;
+	border-radius: 0;
+	box-shadow:
+    inset -2px -2px @default_bg_normal_bevel_shadow,
+    inset 2px 2px @default_bg_normal_bevel_hilight,
+    inset 1px 1px @default_bg_normal_bevel_darkshadow,
+    inset -1px -1px @default_bg_normal_bevel_darkshadow;
+	padding: 2px;
+}
+/* Menu scrolling containers must not inherit the inset view frame. */
+popover.menu > contents > scrolledwindow {
+	box-shadow: none;
+	padding: 0;
+}
+
 /****************
  * spinbutton *
  ****************/
