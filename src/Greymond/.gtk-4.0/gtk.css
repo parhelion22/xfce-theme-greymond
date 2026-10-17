@@ -12,6 +12,32 @@ menubar item label {
 	margin: .4em;
 }
 
+/************
+ * popovers *
+ ************/
+popover.background {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+popover.background > contents,
+popover.background > arrow {
+  background-color: @default_bg_normal;
+  border: 1px solid @default_bg_normal_bevel_darkshadow;
+}
+popover.background > contents {
+  border-radius: 0;
+  box-shadow:
+    inset -1px -1px @default_bg_normal_bevel_shadow,
+    inset 1px 1px @default_bg_normal_bevel_hilight;
+  padding: 1px;
+}
+/* The menu's internal scrolled window does not need a recessed frame. */
+popover.menu > contents > scrolledwindow {
+  box-shadow: none;
+  padding: 0;
+}
+
 /****************
  * spinbutton *
  ****************/
