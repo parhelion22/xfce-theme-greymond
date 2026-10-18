@@ -1776,3 +1776,12 @@ window.xfce-docklike-window > box.menu {
     inset 1px 1px @default_bg_normal_bevel_light,
     inset -1px -1px @default_bg_normal_bevel_darkshadow;
 }
+
+/****************
+ * virt-manager *
+ ***************/
+window > box > notebook > stack > box > notebook > stack > notebook > stack > overlay > * {
+	border: none;
+	margin: -1px;
+	padding: 0;
+}
