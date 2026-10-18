@@ -1782,6 +1782,6 @@ window.xfce-docklike-window > box.menu {
  ***************/
 window > box > notebook > stack > box > notebook > stack > notebook > stack > overlay > * {
 	border: none;
-	margin: -1px;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
 }
