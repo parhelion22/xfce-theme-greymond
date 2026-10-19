@@ -1092,7 +1092,8 @@ switch slider {
  * tooltips *
  ************/
 tooltip,
-tooltip.background	{
+tooltip.background,
+.floating-bar	{
 	background-color: @default_bg_normal;
 	border: 1px solid @default_bg_normal_bevel_darkshadow;
 	color: @default_fg_normal;
