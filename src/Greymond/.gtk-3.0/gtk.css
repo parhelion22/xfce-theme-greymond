@@ -468,7 +468,11 @@ menuitem > image {
 menuitem > arrow {
 	font-size: 1.6em;
 	margin: -.2em 0 -.2em 1em;
-	-gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+	-gtk-icon-source: -gtk-icontheme("pan-right-symbolic");
+}
+menuitem > arrow.left {
+	margin: -.2em 1em -.2em 0;
+	-gtk-icon-source: -gtk-icontheme("pan-left-symbolic");
 }
 /* required for menu in awf-gtk4 */
 menubar scrolledwindow {
