@@ -1583,10 +1583,10 @@ window > deck box {
  * Xfce panel *
  ***************/
 .xfce4-panel button > box {
-	padding-left: 2px;
-	padding-right: 5px;
-	padding-top: 2px;
-	padding-bottom: 2px;
+	padding: 4px;  
+}
+.xfce4-panel button > label {
+	margin: 4px;
 }
 .xfce4-panel button {
 	box-shadow:
@@ -1625,6 +1625,13 @@ window > deck box {
 		inset -2px -2px @default_bg_normal,
 		inset 2px 2px @default_bg_normal;
 	background: @default_bg_prelight;
+}
+.xfce4-panel button#sn-button,
+.xfce4-panel button#pulseaudio-button,
+.xfce4-panel button#xfce4-notification-plugin,
+.xfce4-panel button#xfce4-notification-button {
+	box-shadow: none;
+	background: transparent;
 }
 
 /*****************
