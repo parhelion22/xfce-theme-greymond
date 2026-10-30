@@ -1657,10 +1657,9 @@ XfdesktopIconView.view:active {
 	background-color: @default_bg_normal;
 	color: @default_fg_normal;
 	padding: 2px;
-/*
-	-XfwmTabwinWidget-icon-size: 32px;
-	-XfwmTabwinWidget-preview-size: 32px;
-*/
+
+	-XfwmTabwinWidget-preview-size: 128px;
+
 	box-shadow:
     inset 2px 2px @default_bg_normal_bevel_hilight,
     inset -2px -2px @default_bg_normal_bevel_shadow,    
