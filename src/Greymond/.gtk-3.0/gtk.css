@@ -447,6 +447,7 @@ menuitem:hover {
 	color: @colored_fg_prelight;
 }
 menuitem:disabled {
+	color: @default_fg_insensitive;
 	-gtk-icon-effect: dim;
 }
 menu separator {
