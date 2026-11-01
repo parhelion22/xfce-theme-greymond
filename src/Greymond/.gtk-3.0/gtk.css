@@ -1750,6 +1750,18 @@ window.xfce-docklike-window > box.menu {
 		inset -2px -2px @default_bg_normal,
 		inset 2px 2px @default_bg_normal;	
 }
+#docklike-plugin .window_count {
+	color: @default_fg_normal;
+	text-shadow:
+		-1px -1px @default_bg_normal,
+		 0px -1px @default_bg_normal,
+		 1px -1px @default_bg_normal,
+		-1px  0px @default_bg_normal,
+		 1px  0px @default_bg_normal,
+		-1px  1px @default_bg_normal,
+		 0px  1px @default_bg_normal,
+		 1px  1px @default_bg_normal;
+}
  
 /***********
  * LightDM *
