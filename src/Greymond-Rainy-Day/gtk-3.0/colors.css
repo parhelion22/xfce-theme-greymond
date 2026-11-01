@@ -93,7 +93,10 @@
 @define-color theme_unfocused_selected_bg_color       @default_bg_selected;
 @define-color theme_unfocused_selected_fg_color       @default_fg_selected;
 
+/* accent */
+@define-color accent_color                            @default_bg_selected;
+
 /* symbolic icons */
-@define-color success_color                           #73D216;
-@define-color warning_color                           @warning_bg_normal;
-@define-color error_color                             @error_bg_normal;
+@define-color success_color                           #009100;
+@define-color warning_color                           #BF6500;
+@define-color error_color                             #E73A32;
