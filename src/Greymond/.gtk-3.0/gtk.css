@@ -475,6 +475,12 @@ menuitem > arrow.left {
 	margin: -.2em 1em -.2em 0;
 	-gtk-icon-source: -gtk-icontheme("pan-left-symbolic");
 }
+menu > arrow.top {
+	-gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+menu > arrow.bottom {
+	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+}
 /* required for menu in awf-gtk4 */
 menubar scrolledwindow {
 	box-shadow: none;
