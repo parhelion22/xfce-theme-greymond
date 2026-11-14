@@ -1109,10 +1109,6 @@ tooltip.background,
 	border: 1px solid @default_bg_normal_bevel_darkshadow;
 	color: @default_fg_normal;
 }
-tooltip *, .tooltip * {
-	margin: -1px;
-	border: none;
-}
 
 /*************
  * calendars *
