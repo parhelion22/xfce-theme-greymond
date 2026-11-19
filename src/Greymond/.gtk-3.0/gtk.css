@@ -348,6 +348,7 @@ textview {
 	padding: 2px;
 }
 scrolledwindow {
+  -GtkScrolledWindow-scrollbar-spacing: 0;
 	box-shadow:
     inset -2px -2px @default_bg_normal_bevel_light,
     inset 2px 2px @default_bg_normal_bevel_darkshadow,
