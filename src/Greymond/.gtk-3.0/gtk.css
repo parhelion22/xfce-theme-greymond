@@ -347,6 +347,9 @@ textview {
 	color: @default_text_normal;
 	padding: 2px;
 }
+textview text {
+	background-color: @default_base_normal;
+}
 scrolledwindow {
   -GtkScrolledWindow-scrollbar-spacing: 0;
 	box-shadow:
