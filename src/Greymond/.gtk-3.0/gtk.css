@@ -345,11 +345,10 @@ dialog .view {
 textview {
 	background-color: @default_base_normal;
 	color: @default_text_normal;
-	padding: 2px;
+	padding: 0px;
 }
 textview text {
 	background-color: @default_base_normal;
-	box-shadow: -2px 0 @default_base_normal;
 }
 scrolledwindow {
   -GtkScrolledWindow-scrollbar-spacing: 0;
