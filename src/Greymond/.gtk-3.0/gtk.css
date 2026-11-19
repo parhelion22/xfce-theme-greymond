@@ -750,7 +750,8 @@ popover modelbutton {
 /***********
  * toolbar *
  ***********/
-toolbar {
+toolbar,
+window > frame > border:not(.flat) {
 	background-color: @default_bg_normal;
 	box-shadow:
     inset -2px -2px @default_bg_normal_bevel_shadow,
